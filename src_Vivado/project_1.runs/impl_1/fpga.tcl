@@ -61,121 +61,24 @@ proc step_failed { step } {
 }
 
 
-start_step init_design
-set ACTIVE_STEP init_design
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
-  create_project -in_memory -part xcku035-fbva676-2-e
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  create_msg_db write_bitstream.pb
+  open_checkpoint fpga_routed.dcp
   set_property webtalk.parent_dir /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.cache/wt [current_project]
-  set_property parent.project_path /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.xpr [current_project]
-  set_property ip_output_repo /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/synth_1/fpga.dcp
-  read_ip -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/eth_xcvr_gth_channel.xci
-  read_ip -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_full/eth_xcvr_gth_full.xci
-  read_ip -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0.xci
-  read_xdc {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc}}
-  read_xdc {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/boot.xdc}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/eth_xcvr_phy_10g_gty_wrapper.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_ptp_clock.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_rb_clk_info.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/ptp_td_leaf.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/rb_drp.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/sync_reset.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/tdma_ber_ch.tcl}}
-  link_design -top fpga -part xcku035-fbva676-2-e
-  close_msg_db -file init_design.pb
+  catch { write_mem_info -force fpga.mmi }
+  write_bitstream -force fpga.bit 
+  catch {write_debug_probes -quiet -force fpga}
+  catch {file copy -force fpga.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force fpga_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file fpga_drc_opted.rpt -pb fpga_drc_opted.pb -rpx fpga_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-    implement_debug_core 
-  } 
-  place_design -directive ExtraTimingOpt
-  write_checkpoint -force fpga_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file fpga_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file fpga_utilization_placed.rpt -pb fpga_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file fpga_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step phys_opt_design
-set ACTIVE_STEP phys_opt_design
-set rc [catch {
-  create_msg_db phys_opt_design.pb
-  phys_opt_design -directive Explore
-  write_checkpoint -force fpga_physopt.dcp
-  close_msg_db -file phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step phys_opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design -directive NoTimingRelaxation
-  write_checkpoint -force fpga_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file fpga_drc_routed.rpt -pb fpga_drc_routed.pb -rpx fpga_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file fpga_methodology_drc_routed.rpt -pb fpga_methodology_drc_routed.pb -rpx fpga_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file fpga_power_routed.rpt -pb fpga_power_summary_routed.pb -rpx fpga_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file fpga_route_status.rpt -pb fpga_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file fpga_timing_summary_routed.rpt -pb fpga_timing_summary_routed.pb -rpx fpga_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file fpga_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file fpga_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file fpga_bus_skew_routed.rpt -pb fpga_bus_skew_routed.pb -rpx fpga_bus_skew_routed.rpx"
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force fpga_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
