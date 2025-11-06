@@ -1,0 +1,1105 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov  6 16:16:26 2025
+# Process ID: 2563915
+# Current directory: /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1
+# Command line: vivado -log fpga.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source fpga.tcl -notrace
+# Log file: /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/fpga.vdi
+# Journal file: /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source fpga.tcl -notrace
+Command: link_design -top fpga -part xcku035-fbva676-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0.dcp' for cell 'pcie3_ultrascale_inst'
+INFO: [Project 1-454] Reading design checkpoint '/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_full/eth_xcvr_gth_full.dcp' for cell 'sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst'
+INFO: [Project 1-454] Reading design checkpoint '/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/eth_xcvr_gth_channel.dcp' for cell 'sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst'
+INFO: [Netlist 29-17] Analyzing 3165 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xcku035-fbva676-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/source/pcie3_ultrascale_0-PCIE_X0Y0.xdc] for cell 'pcie3_ultrascale_inst/inst'
+Finished Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/source/pcie3_ultrascale_0-PCIE_X0Y0.xdc] for cell 'pcie3_ultrascale_inst/inst'
+Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/ip_0/synth/pcie3_ultrascale_0_gt.xdc] for cell 'pcie3_ultrascale_inst/inst/gt_top_i/gt_wizard.gtwizard_top_i/pcie3_ultrascale_0_gt_i/inst'
+Finished Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/ip_0/synth/pcie3_ultrascale_0_gt.xdc] for cell 'pcie3_ultrascale_inst/inst/gt_top_i/gt_wizard.gtwizard_top_i/pcie3_ultrascale_0_gt_i/inst'
+Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/synth/eth_xcvr_gth_channel.xdc] for cell 'sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst'
+Finished Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/synth/eth_xcvr_gth_channel.xdc] for cell 'sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst'
+Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_full/synth/eth_xcvr_gth_full.xdc] for cell 'sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst'
+Finished Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_full/synth/eth_xcvr_gth_full.xdc] for cell 'sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst'
+Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+Finished Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc]
+Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/boot.xdc]
+Finished Parsing XDC File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/boot.xdc]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl]
+Inserting timing constraints for axis_async_fifo instance core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/port[0].port_inst/port_rx_inst/rx_async_fifo_inst/fifo_inst
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl:23]
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has RXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl:23]
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has TXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl:23]
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has RXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl:23]
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has TXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl:23]
+INFO: [Timing 38-2] Deriving generated clocks [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl:23]
+Inserting timing constraints for axis_async_fifo instance core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/port[0].port_inst/port_tx_inst/tx_cpl_fifo_inst
+Inserting timing constraints for axis_async_fifo instance core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/port[0].port_inst/port_tx_inst/tx_async_fifo_inst/fifo_inst
+Inserting timing constraints for axis_async_fifo instance core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/port[0].port_inst/port_rx_inst/rx_async_fifo_inst/fifo_inst
+Inserting timing constraints for axis_async_fifo instance core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/port[0].port_inst/port_tx_inst/tx_cpl_fifo_inst
+Inserting timing constraints for axis_async_fifo instance core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/port[0].port_inst/port_tx_inst/tx_async_fifo_inst/fifo_inst
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/eth_xcvr_phy_10g_gty_wrapper.tcl]
+Inserting timing constraints for eth_xcvr_phy_10g_gty_wrapper instance sfp_phy_quad_inst/phy1.eth_xcvr_phy_1
+Inserting timing constraints for eth_xcvr_phy_10g_gty_wrapper instance sfp_phy_quad_inst/phy2.eth_xcvr_phy_2
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/eth_xcvr_phy_10g_gty_wrapper.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl]
+Inserting timing constraints for mqnic_port instance core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/port[0].port_inst
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_en_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_en_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_req_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_req_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_fc_quanta_step_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_fc_quanta_step_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_pfc_ack_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_pfc_ack_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_fc_quanta_step_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_fc_quanta_step_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+Inserting timing constraints for mqnic_port instance core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/port[0].port_inst
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_en_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_en_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_req_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_pfc_req_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_fc_quanta_step_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'tx_fc_quanta_step_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_pfc_ack_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_pfc_ack_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_fc_quanta_step_sync_1_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+WARNING: [Vivado 12-180] No cells matched 'rx_fc_quanta_step_sync_2_reg_reg[*]'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl:6]
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_ptp_clock.tcl]
+Inserting timing constraints for mqnic_ptp_clock instance core_inst/core_inst/core_pcie_inst/core_inst/mqnic_ptp_inst/ptp_clock_inst
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_ptp_clock.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_rb_clk_info.tcl]
+Inserting timing constraints for mqnic_rb_clk_info instance core_inst/core_inst/core_pcie_inst/core_inst/mqnic_rb_clk_info_inst
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_rb_clk_info.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/ptp_td_leaf.tcl]
+Inserting timing constraints for ptp_td_leaf instance core_inst/core_inst/core_pcie_inst/core_inst/iface[0].port[0].ptp.rx_ptp_td_leaf_inst
+Inserting timing constraints for ptp_td_leaf instance core_inst/core_inst/core_pcie_inst/core_inst/iface[0].port[0].ptp.tx_ptp_td_leaf_inst
+Inserting timing constraints for ptp_td_leaf instance core_inst/core_inst/core_pcie_inst/core_inst/iface[1].port[0].ptp.rx_ptp_td_leaf_inst
+Inserting timing constraints for ptp_td_leaf instance core_inst/core_inst/core_pcie_inst/core_inst/iface[1].port[0].ptp.tx_ptp_td_leaf_inst
+Inserting timing constraints for ptp_td_leaf instance core_inst/core_inst/core_pcie_inst/core_inst/mqnic_ptp_inst/ptp_clock_inst/ptp_td_leaf_inst
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/ptp_td_leaf.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/rb_drp.tcl]
+Inserting timing constraints for rb_drp instance core_inst/sfp_rb_drp_inst
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/rb_drp.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/sync_reset.tcl]
+Inserting timing constraints for sync_reset instance sfp_sync_reset_inst
+Inserting timing constraints for sync_reset instance sync_reset_125mhz_inst
+Inserting timing constraints for sync_reset instance sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/rx_reset_sync_inst
+Inserting timing constraints for sync_reset instance sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/sync_reset_common_reset_inst
+Inserting timing constraints for sync_reset instance sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/tx_reset_sync_inst
+Inserting timing constraints for sync_reset instance sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/rx_reset_sync_inst
+Inserting timing constraints for sync_reset instance sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/tx_reset_sync_inst
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/sync_reset.tcl]
+Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/tdma_ber_ch.tcl]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {(ORIG_REF_NAME == tdma_ber_ch || REF_NAME == tdma_ber_ch)}'. [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/tdma_ber_ch.tcl:6]
+Finished Sourcing Tcl File [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/tdma_ber_ch.tcl]
+Sourcing Tcl File [/home/chenxun/SoftWare/Vivado2018/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'pcie3_ultrascale_inst/inst/user_lnk_up_cdc'
+Finished Sourcing Tcl File [/home/chenxun/SoftWare/Vivado2018/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'pcie3_ultrascale_inst/inst/user_lnk_up_cdc'
+Sourcing Tcl File [/home/chenxun/SoftWare/Vivado2018/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'pcie3_ultrascale_inst/inst/user_reset_cdc'
+Finished Sourcing Tcl File [/home/chenxun/SoftWare/Vivado2018/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'pcie3_ultrascale_inst/inst/user_reset_cdc'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2606.449 ; gain = 0.000 ; free physical = 17321 ; free virtual = 30465
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1080 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 4 instances
+  IBUF => IBUF_ANALOG: 1 instances
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 21 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 6 instances
+  RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 575 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 103 instances
+  RAM32X1S => RAM32X1S (RAMS32): 48 instances
+  RAM64M8 => RAM64M8 (RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E): 275 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 23 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 23 instances
+
+24 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2606.449 ; gain = 1250.562 ; free physical = 17321 ; free virtual = 30465
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku035'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku035'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2670.480 ; gain = 64.031 ; free physical = 17316 ; free virtual = 30460
+
+Starting Cache Timing Information Task
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has RXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has TXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has RXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+WARNING: [Timing 38-277] The instance 'sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST' has TXPLLCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks
+Ending Cache Timing Information Task | Checksum: 188743d6b
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2670.480 ; gain = 0.000 ; free physical = 17185 ; free virtual = 30329
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 22 inverter(s) to 873 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: fc19e8b5
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2698.137 ; gain = 27.656 ; free physical = 17219 ; free virtual = 30363
+INFO: [Opt 31-389] Phase Retarget created 11 cells and removed 86 cells
+INFO: [Opt 31-1021] In phase Retarget, 15 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: e0a1720e
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2698.137 ; gain = 27.656 ; free physical = 17253 ; free virtual = 30398
+INFO: [Opt 31-389] Phase Constant propagation created 10 cells and removed 34 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: ddcdb518
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2698.137 ; gain = 27.656 ; free physical = 17256 ; free virtual = 30400
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 695 cells
+INFO: [Opt 31-1021] In phase Sweep, 7 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG clk_125mhz_mmcm_out_BUFG_inst to drive 0 load(s) on clock net clk_125mhz_mmcm_out_BUFGCE
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 14fff85ce
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2698.137 ; gain = 27.656 ; free physical = 17274 ; free virtual = 30418
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1b6044321
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.137 ; gain = 27.656 ; free physical = 17275 ; free virtual = 30420
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: dce49d3f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2698.137 ; gain = 27.656 ; free physical = 17297 ; free virtual = 30441
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 7 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              11  |              86  |                                             15  |
+|  Constant propagation         |              10  |              34  |                                              1  |
+|  Sweep                        |               2  |             695  |                                              7  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              7  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2698.137 ; gain = 0.000 ; free physical = 17296 ; free virtual = 30441
+Ending Logic Optimization Task | Checksum: 17cb50a91
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2698.137 ; gain = 27.656 ; free physical = 17296 ; free virtual = 30441
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.055 | TNS=-0.150 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 15 BRAM(s) out of a total of 479 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-201] Structural ODC has moved 189 WE to EN ports
+Number of BRAM Ports augmented: 141 newly gated: 195 Total Ports: 958
+Ending PowerOpt Patch Enables Task | Checksum: 15581efc8
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16376 ; free virtual = 29520
+Ending Power Optimization Task | Checksum: 15581efc8
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:34 . Memory (MB): peak = 4825.387 ; gain = 2127.250 ; free physical = 16463 ; free virtual = 29608
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 10e4ecc3d
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16530 ; free virtual = 29675
+Ending Final Cleanup Task | Checksum: 10e4ecc3d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16524 ; free virtual = 29668
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16523 ; free virtual = 29668
+Ending Netlist Obfuscation Task | Checksum: 10e4ecc3d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16523 ; free virtual = 29668
+INFO: [Common 17-83] Releasing license: Implementation
+102 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:35 ; elapsed = 00:00:51 . Memory (MB): peak = 4825.387 ; gain = 2218.938 ; free physical = 16530 ; free virtual = 29675
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16530 ; free virtual = 29674
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16612 ; free virtual = 29762
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16595 ; free virtual = 29757
+INFO: [Common 17-1381] The checkpoint '/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/fpga_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16632 ; free virtual = 29796
+INFO: [runtcl-4] Executing : report_drc -file fpga_drc_opted.rpt -pb fpga_drc_opted.pb -rpx fpga_drc_opted.rpx
+Command: report_drc -file fpga_drc_opted.rpt -pb fpga_drc_opted.pb -rpx fpga_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/fpga_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku035'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku035'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC PORTPROP-10] Incorrect IOStandard on MCAP reset: The PCI Express reset pin pcie_reset_n is driven by an IOB with a 1.8V IO standard.  This is incompatible with the 3.3V signal that is generated by the reset pin of the PCI Express edge connector.  If this pin cannot be driven at 3.3V, your  design will require an external level shifter to convert the incoming 3.3V reset signal from the edge connector to the 1.8V at the FPGA pin.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Advisories
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16604 ; free virtual = 29768
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: ebabe9ef
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16604 ; free virtual = 29768
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16604 ; free virtual = 29768
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f23f7119
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16475 ; free virtual = 29640
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1e6fef9cb
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:13 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16211 ; free virtual = 29376
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1e6fef9cb
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:13 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16211 ; free virtual = 29376
+Phase 1 Placer Initialization | Checksum: 1e6fef9cb
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:13 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16211 ; free virtual = 29376
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1938b905f
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:15 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16138 ; free virtual = 29303
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-76] Pass 1. Identified 8 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg_reg[7]_rep_n_0. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg[8]. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg_reg[6]_rep_n_0. Replicated 7 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg[6]. Replicated 10 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg[4]. Replicated 9 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg_reg[8]_rep_n_0. Replicated 7 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg_reg[7]_rep_n_0. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/tx_qm_inst/queue_ram_addr_pipeline_reg_reg[3]__0[9]. Replicated 7 times.
+INFO: [Physopt 32-232] Optimized 8 nets. Created 58 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 8 nets or cells. Created 58 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16158 ; free virtual = 29323
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][2]_i_1__7_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][2]_i_1__7 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_3__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_3__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_0_i_2__4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_0_i_2__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_3__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_3__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_10__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_10__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_3__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_3__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][9]_i_1__4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][9]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_3__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_3__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_4__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_4__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][5]_i_1__7_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][5]_i_1__7 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][6]_i_1__6_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][6]_i_1__6 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_0_i_2__1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_0_i_2__1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][3]_i_1__7_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][3]_i_1__7 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_7__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_7__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_3_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_3 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][8]_i_1__4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][8]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][7]_i_1__6_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][7]_i_1__6 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_6__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_6__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][1]_i_1__7_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][1]_i_1__7 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_3_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_3 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_9__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_9__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][0]_i_1__7_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][0]_i_1__7 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_12__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_12__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][10]_i_1__4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][10]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_5__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_5__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_11__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_11__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_3_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_3 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][11]_i_1__4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][11]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_8__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_8__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_2__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_2__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_1__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_1__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][4]_i_1__7_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][4]_i_1__7 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_1__4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_1__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_1__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/tx_qm_inst/queue_ram_addr_pipeline_reg[0][12]_i_1__3_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/tx_qm_inst/queue_ram_addr_pipeline_reg[0][12]_i_1__3 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_10__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_10__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[2] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][2]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/op_axil_read_pipe_reg_reg[1] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_reg_0_bram_0_i_2__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_10_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_10 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_4__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_4__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][2]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][2]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_1__1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_1_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_3_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_0_bram_2_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][10]_i_1__1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][10]_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][9]_i_1__1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][9]_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_12__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_12__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][11]_i_1__1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][11]_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[1] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][1]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_8__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_8__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][5]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][5]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][6]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][6]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_11_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_11 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[7] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][8]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][3]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][3]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_3__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_3__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][0]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][0]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_2__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_2__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_7__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_7__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_1__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_1__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_6__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_6__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_3__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_3__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][1]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][1]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_5__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_5__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[3] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][3]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[10] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][11]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_4__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_4__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[9] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][10]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_6__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_6__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][8]_i_1__1_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][8]_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_11__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_11__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_5__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_5__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[0] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][0]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_12_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_12 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[8] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][9]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[6] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][7]_i_1__3 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_2__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_2__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][7]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][7]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_8__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_8__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_9__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_9__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][4]_i_1__2_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_addr_pipeline_reg[0][4]_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/mem_reg_bram_3_i_4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/mem_reg_bram_3_i_4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_7__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_7__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[9] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][10]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/doorbell_fifo/ADDRBWRADDR[0] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/doorbell_fifo/queue_ram_addr_pipeline_reg[0][6]_i_1__3 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[5] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][5]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_9__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_7_bram_0_i_9__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[8] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][9]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/tx_qm_inst/queue_ram_addr_pipeline_reg[0][12]_i_1__0_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/tx_qm_inst/queue_ram_addr_pipeline_reg[0][12]_i_1__0 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[10] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][11]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/doorbell_fifo/ADDRBWRADDR[0] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/doorbell_fifo/queue_ram_addr_pipeline_reg[0][6]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[7] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][8]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[4] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][4]_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/mem_reg_bram_2_i_4_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/mem_reg_bram_2_i_4 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/out0[6] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_addr_pipeline_reg[0][7]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_10_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/queue_ram_reg_14_bram_0_i_10 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/mem_reg_bram_0_i_3__5_n_0 could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/mem_reg_bram_0_i_3__5 could not be replicated
+INFO: [Physopt 32-117] Net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/op_axil_read_pipe_reg_reg[1] could not be optimized because driver core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/queue_ram_reg_0_bram_0_i_2 could not be replicated
+INFO: [Common 17-14] Message 'Physopt 32-117' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-46] Identified 31 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[2]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[8]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[4]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[5]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[10]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[0]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[2]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[3]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[7]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[1]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[6]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[5]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[0]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[8]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[9]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[3]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[11]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[4]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[1]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[7]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[9]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[10]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg[10]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/queue_ram_addr_pipeline_reg_reg[3][12]_0[11]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg[9]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/cqm_inst/ADDRARDADDR[6]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg[9]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/cqm_inst/ADDRARDADDR[0]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/rx_fifo_inst/fifo[0].fifo_inst/fifo_inst/wr_ptr_reg[10]. Replicated 1 times.
+INFO: [Physopt 32-232] Optimized 29 nets. Created 29 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 29 nets or cells. Created 29 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16147 ; free virtual = 29312
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16148 ; free virtual = 29313
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/mem_reg_bram_2. 4 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/doorbell_fifo/mem_reg_bram_0. 13 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/rr_fifo/mem_reg_bram_2. 4 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/sched[0].scheduler_block/tx_scheduler_inst/doorbell_fifo/mem_reg_bram_0. 13 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/interface_rx_inst/ingress_inst/rx_hash_data_fifo/mem_reg_0. 72 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/interface_rx_inst/ingress_inst/rx_hash_data_fifo/mem_reg_0. 72 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/interface_rx_inst/dma_psdpram_rx_inst/genblk1[1].mem_reg_reg_0. 16 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[0].interface_inst/interface_rx_inst/dma_psdpram_rx_inst/genblk1[1].mem_reg_reg_3. 16 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell core_inst/core_inst/core_pcie_inst/core_inst/iface[1].interface_inst/desc_fetch_inst/dma_psdpram_inst/genblk1[1].mem_reg_reg_3. 64 registers were pushed out.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 9 nets or cells. Created 274 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16158 ; free virtual = 29323
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16164 ; free virtual = 29329
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Fanout                        |           58  |              0  |                     8  |           0  |           1  |  00:00:01  |
+|  Critical Cell                 |           29  |              0  |                    29  |           0  |           1  |  00:00:02  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                 |          274  |              0  |                     9  |           0  |           1  |  00:00:05  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |          361  |              0  |                    46  |           0  |           7  |  00:00:08  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1dedbea4f
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:55 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16149 ; free virtual = 29314
+Phase 2 Global Placement | Checksum: 222ca6564
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:57 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16185 ; free virtual = 29350
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 222ca6564
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:57 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16185 ; free virtual = 29350
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2486fe97a
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16119 ; free virtual = 29284
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2b2406628
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16123 ; free virtual = 29288
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 2b2eb15dd
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16128 ; free virtual = 29293
+
+Phase 3.5 IO Cut Optimizer
+Phase 3.5 IO Cut Optimizer | Checksum: 292c6c33c
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:02 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16117 ; free virtual = 29282
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 24eace0a1
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:05 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16127 ; free virtual = 29293
+
+Phase 3.7 Small Shape Clustering
+Phase 3.7 Small Shape Clustering | Checksum: 11fa6f897
+
+Time (s): cpu = 00:02:16 ; elapsed = 00:01:07 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16069 ; free virtual = 29234
+
+Phase 3.8 DP Optimization
+Phase 3.8 DP Optimization | Checksum: 1ed45b5d4
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:17 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15998 ; free virtual = 29163
+
+Phase 3.9 Flow Legalize Slice Clusters
+Phase 3.9 Flow Legalize Slice Clusters | Checksum: 1a9887633
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:17 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16016 ; free virtual = 29181
+
+Phase 3.10 Slice Area Swap
+Phase 3.10 Slice Area Swap | Checksum: 1933709f7
+
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:19 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16002 ; free virtual = 29168
+
+Phase 3.11 Commit Slice Clusters
+Phase 3.11 Commit Slice Clusters | Checksum: 1c0cb941c
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:01:21 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15970 ; free virtual = 29135
+
+Phase 3.12 Re-assign LUT pins
+Phase 3.12 Re-assign LUT pins | Checksum: 24132360a
+
+Time (s): cpu = 00:02:54 ; elapsed = 00:01:23 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15968 ; free virtual = 29133
+
+Phase 3.13 Pipeline Register Optimization
+Phase 3.13 Pipeline Register Optimization | Checksum: 243e93b37
+
+Time (s): cpu = 00:02:55 ; elapsed = 00:01:23 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15981 ; free virtual = 29146
+
+Phase 3.14 Fast Optimization
+Phase 3.14 Fast Optimization | Checksum: 24081ffd8
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:37 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15971 ; free virtual = 29136
+Phase 3 Detail Placement | Checksum: 24081ffd8
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:37 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15971 ; free virtual = 29136
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 269695f3b
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-46] BUFG insertion identified 0 candidate nets, 0 success, 0 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 269695f3b
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:01:44 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15999 ; free virtual = 29164
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.990. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 200aa34dc
+
+Time (s): cpu = 00:04:02 ; elapsed = 00:02:05 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16024 ; free virtual = 29190
+Phase 4.1 Post Commit Optimization | Checksum: 200aa34dc
+
+Time (s): cpu = 00:04:02 ; elapsed = 00:02:05 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16023 ; free virtual = 29188
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 200aa34dc
+
+Time (s): cpu = 00:04:05 ; elapsed = 00:02:07 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16031 ; free virtual = 29197
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16036 ; free virtual = 29201
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 2cdd46ba5
+
+Time (s): cpu = 00:04:06 ; elapsed = 00:02:08 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16047 ; free virtual = 29213
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16048 ; free virtual = 29214
+Phase 4.4 Final Placement Cleanup | Checksum: 222546df5
+
+Time (s): cpu = 00:04:06 ; elapsed = 00:02:08 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16047 ; free virtual = 29212
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 222546df5
+
+Time (s): cpu = 00:04:07 ; elapsed = 00:02:09 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16047 ; free virtual = 29212
+Ending Placer Task | Checksum: 134fb90e4
+
+Time (s): cpu = 00:04:07 ; elapsed = 00:02:09 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16219 ; free virtual = 29384
+INFO: [Common 17-83] Releasing license: Implementation
+308 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:04:10 ; elapsed = 00:02:10 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16219 ; free virtual = 29384
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16219 ; free virtual = 29384
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16145 ; free virtual = 29359
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16014 ; free virtual = 29331
+INFO: [Common 17-1381] The checkpoint '/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/fpga_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16164 ; free virtual = 29368
+INFO: [runtcl-4] Executing : report_io -file fpga_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.10 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16132 ; free virtual = 29335
+INFO: [runtcl-4] Executing : report_utilization -file fpga_utilization_placed.rpt -pb fpga_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file fpga_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.21 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 16119 ; free virtual = 29324
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku035'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku035'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC PORTPROP-10] Incorrect IOStandard on MCAP reset: The PCI Express reset pin pcie_reset_n is driven by an IOB with a 1.8V IO standard.  This is incompatible with the 3.3V signal that is generated by the reset pin of the PCI Express edge connector.  If this pin cannot be driven at 3.3V, your  design will require an external level shifter to convert the incoming 3.3V reset signal from the edge connector to the 1.8V at the FPGA pin.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Advisories
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 32fb681d ConstDB: 0 ShapeSum: 34d5f1fe RouteDB: cd2a36c9
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 33cc8277
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15828 ; free virtual = 29032
+Post Restoration Checksum: NetGraph: 81ea2f34 NumContArr: a1066ff8 Constraints: da610769 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1fd51a695
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15786 ; free virtual = 28991
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1fd51a695
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15731 ; free virtual = 28936
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1fd51a695
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15731 ; free virtual = 28936
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 12be609cc
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15667 ; free virtual = 28872
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 12fedae02
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:22 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15669 ; free virtual = 28874
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.878 | TNS=-793.034| WHS=-0.324 | THS=-135.670|
+
+
+Phase 2.6 Update Timing for Bus Skew
+
+Phase 2.6.1 Update Timing
+Phase 2.6.1 Update Timing | Checksum: 126474f53
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:32 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15633 ; free virtual = 28838
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.878 | TNS=-871.698| WHS=N/A    | THS=N/A    |
+
+Phase 2.6 Update Timing for Bus Skew | Checksum: 14b6f5b89
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:32 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15634 ; free virtual = 28839
+Phase 2 Router Initialization | Checksum: 1557f75fc
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:32 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15634 ; free virtual = 28839
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 18d00c1a5
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:00:40 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15449 ; free virtual = 28655
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 16352
+ Number of Nodes with overlaps = 1335
+ Number of Nodes with overlaps = 293
+ Number of Nodes with overlaps = 92
+ Number of Nodes with overlaps = 52
+ Number of Nodes with overlaps = 23
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+INFO: [Route 35-443] CLB routing congestion detected. Several CLBs have high routing utilization, which can impact timing closure. Top ten most congested CLBs are: CLE_M_X42Y162 CLEL_R_X42Y162 
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+INFO: [Route 35-443] CLB routing congestion detected. Several CLBs have high routing utilization, which can impact timing closure. Top ten most congested CLBs are: CLE_M_X42Y163 CLEL_R_X42Y163 
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-467] Router swapped GT pin pcie3_ultrascale_inst/inst/gt_top_i/gt_wizard.gtwizard_top_i/pcie3_ultrascale_0_gt_i/inst/gen_gtwizard_gthe3_top.pcie3_ultrascale_0_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_common.gen_common_container[0].gen_enabled_common.gthe3_common_wrapper_inst/common_inst/gthe3_common_gen.GTHE3_COMMON_PRIM_INST/GTREFCLK01 to physical pin GTHE3_COMMON_X0Y0/COM2_REFCLKOUT5
+INFO: [Route 35-467] Router swapped GT pin pcie3_ultrascale_inst/inst/gt_top_i/gt_wizard.gtwizard_top_i/pcie3_ultrascale_0_gt_i/inst/gen_gtwizard_gthe3_top.pcie3_ultrascale_0_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE3_CHANNEL_X0Y0/SOUTHREFCLK1
+INFO: [Route 35-467] Router swapped GT pin pcie3_ultrascale_inst/inst/gt_top_i/gt_wizard.gtwizard_top_i/pcie3_ultrascale_0_gt_i/inst/gen_gtwizard_gthe3_top.pcie3_ultrascale_0_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[1].GTHE3_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE3_CHANNEL_X0Y1/SOUTHREFCLK1
+INFO: [Route 35-467] Router swapped GT pin pcie3_ultrascale_inst/inst/gt_top_i/gt_wizard.gtwizard_top_i/pcie3_ultrascale_0_gt_i/inst/gen_gtwizard_gthe3_top.pcie3_ultrascale_0_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[2].GTHE3_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE3_CHANNEL_X0Y2/SOUTHREFCLK1
+INFO: [Route 35-467] Router swapped GT pin pcie3_ultrascale_inst/inst/gt_top_i/gt_wizard.gtwizard_top_i/pcie3_ultrascale_0_gt_i/inst/gen_gtwizard_gthe3_top.pcie3_ultrascale_0_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[3].GTHE3_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE3_CHANNEL_X0Y3/SOUTHREFCLK1
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.148 | TNS=-1773.774| WHS=-0.020 | THS=-0.054 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1d8a26ce9
+
+Time (s): cpu = 00:04:14 ; elapsed = 00:02:14 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15521 ; free virtual = 28727
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 152
+ Number of Nodes with overlaps = 31
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.980 | TNS=-1619.699| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: fb27d190
+
+Time (s): cpu = 00:04:48 ; elapsed = 00:02:47 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15613 ; free virtual = 28819
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 124
+ Number of Nodes with overlaps = 45
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.914 | TNS=-1557.976| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: fc8c9809
+
+Time (s): cpu = 00:05:21 ; elapsed = 00:03:17 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15606 ; free virtual = 28812
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 160
+ Number of Nodes with overlaps = 52
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.925 | TNS=-1550.227| WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: 17195177a
+
+Time (s): cpu = 00:05:56 ; elapsed = 00:03:49 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15588 ; free virtual = 28794
+Phase 4 Rip-up And Reroute | Checksum: 17195177a
+
+Time (s): cpu = 00:05:56 ; elapsed = 00:03:49 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15588 ; free virtual = 28794
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 12180c071
+
+Time (s): cpu = 00:06:05 ; elapsed = 00:03:52 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15608 ; free virtual = 28814
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.914 | TNS=-1557.976| WHS=0.030  | THS=0.000  |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 21a9a5dcf
+
+Time (s): cpu = 00:06:08 ; elapsed = 00:03:53 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15585 ; free virtual = 28792
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 21a9a5dcf
+
+Time (s): cpu = 00:06:08 ; elapsed = 00:03:53 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15587 ; free virtual = 28793
+Phase 5 Delay and Skew Optimization | Checksum: 21a9a5dcf
+
+Time (s): cpu = 00:06:08 ; elapsed = 00:03:54 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15588 ; free virtual = 28794
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 150f000b3
+
+Time (s): cpu = 00:06:17 ; elapsed = 00:03:57 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15606 ; free virtual = 28813
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.911 | TNS=-1546.312| WHS=0.030  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 15b3d35a7
+
+Time (s): cpu = 00:06:18 ; elapsed = 00:03:57 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15599 ; free virtual = 28806
+Phase 6 Post Hold Fix | Checksum: 15b3d35a7
+
+Time (s): cpu = 00:06:18 ; elapsed = 00:03:57 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15598 ; free virtual = 28804
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 10.8941 %
+  Global Horizontal Routing Utilization  = 8.69508 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 85.1695%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X48Y175 -> INT_X48Y175
+South Dir 1x1 Area, Max Cong = 76.7932%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 68.2692%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 75.9615%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 10849e5f2
+
+Time (s): cpu = 00:06:23 ; elapsed = 00:04:01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15603 ; free virtual = 28810
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 10849e5f2
+
+Time (s): cpu = 00:06:23 ; elapsed = 00:04:01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15607 ; free virtual = 28814
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 10849e5f2
+
+Time (s): cpu = 00:06:26 ; elapsed = 00:04:04 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15595 ; free virtual = 28801
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.911 | TNS=-1546.312| WHS=0.030  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 10849e5f2
+
+Time (s): cpu = 00:06:26 ; elapsed = 00:04:04 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15596 ; free virtual = 28803
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:06:26 ; elapsed = 00:04:04 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15714 ; free virtual = 28921
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+337 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:30 ; elapsed = 00:04:06 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15714 ; free virtual = 28921
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15715 ; free virtual = 28921
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15682 ; free virtual = 28937
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15504 ; free virtual = 28911
+INFO: [Common 17-1381] The checkpoint '/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/fpga_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 4825.387 ; gain = 0.000 ; free physical = 15671 ; free virtual = 28927
+INFO: [runtcl-4] Executing : report_drc -file fpga_drc_routed.rpt -pb fpga_drc_routed.pb -rpx fpga_drc_routed.rpx
+Command: report_drc -file fpga_drc_routed.rpt -pb fpga_drc_routed.pb -rpx fpga_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/fpga_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file fpga_methodology_drc_routed.rpt -pb fpga_methodology_drc_routed.pb -rpx fpga_methodology_drc_routed.rpx
+Command: report_methodology -file fpga_methodology_drc_routed.rpt -pb fpga_methodology_drc_routed.pb -rpx fpga_methodology_drc_routed.rpx
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/impl_1/fpga_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:46 ; elapsed = 00:00:14 . Memory (MB): peak = 4866.320 ; gain = 40.934 ; free physical = 14866 ; free virtual = 28123
+INFO: [runtcl-4] Executing : report_power -file fpga_power_routed.rpt -pb fpga_power_summary_routed.pb -rpx fpga_power_routed.rpx
+Command: report_power -file fpga_power_routed.rpt -pb fpga_power_summary_routed.pb -rpx fpga_power_routed.rpx
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:28]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:43]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:45]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:74]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:76]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:79]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:81]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:88]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:90]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:133]
+INFO: [Constraints 18-632] set_output_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:182]
+INFO: [Constraints 18-632] set_input_delay: No clock object specified, the clocks will be automatically identified [/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc:184]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+373 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:28 ; elapsed = 00:00:12 . Memory (MB): peak = 5018.074 ; gain = 151.754 ; free physical = 14747 ; free virtual = 28016
+INFO: [runtcl-4] Executing : report_route_status -file fpga_route_status.rpt -pb fpga_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file fpga_timing_summary_routed.rpt -pb fpga_timing_summary_routed.pb -rpx fpga_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file fpga_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file fpga_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file fpga_bus_skew_routed.rpt -pb fpga_bus_skew_routed.pb -rpx fpga_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  6 16:25:28 2025...
