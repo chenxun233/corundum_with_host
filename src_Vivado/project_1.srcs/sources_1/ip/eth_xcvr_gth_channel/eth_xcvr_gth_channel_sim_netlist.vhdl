@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Wed Nov  5 12:45:53 2025
+-- Date        : Wed Nov  5 12:45:52 2025
 -- Host        : chenxun-Z790-UD-AC running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/eth_xcvr_gth_channel_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top eth_xcvr_gth_channel -prefix
+--               eth_xcvr_gth_channel_ eth_xcvr_gth_channel_sim_netlist.vhdl
 -- Design      : eth_xcvr_gth_channel
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -353,8 +353,6 @@ entity eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gthe3_channel is
     lopt_6 : out STD_LOGIC;
     lopt_7 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gthe3_channel : entity is "gtwizard_ultrascale_v1_7_5_gthe3_channel";
 end eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gthe3_channel;
 
 architecture STRUCTURE of eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gthe3_channel is
@@ -1135,8 +1133,6 @@ entity eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx is
     lopt_1 : in STD_LOGIC;
     lopt_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx : entity is "gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx";
 end eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx;
 
 architecture STRUCTURE of eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx is
@@ -1229,8 +1225,6 @@ entity eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_tx is
     lopt_1 : in STD_LOGIC;
     lopt_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_tx : entity is "gtwizard_ultrascale_v1_7_5_gtwiz_userclk_tx";
 end eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_tx;
 
 architecture STRUCTURE of eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_tx is
@@ -1651,8 +1645,6 @@ entity eth_xcvr_gth_channel_eth_xcvr_gth_channel_gthe3_channel_wrapper is
     lopt_6 : out STD_LOGIC;
     lopt_7 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gthe3_channel_wrapper : entity is "eth_xcvr_gth_channel_gthe3_channel_wrapper";
 end eth_xcvr_gth_channel_eth_xcvr_gth_channel_gthe3_channel_wrapper;
 
 architecture STRUCTURE of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gthe3_channel_wrapper is
@@ -2336,8 +2328,6 @@ entity eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_gthe3 is
     txdataextendrsvd_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     drpaddr_in : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_gthe3 : entity is "eth_xcvr_gth_channel_gtwizard_gthe3";
 end eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_gthe3;
 
 architecture STRUCTURE of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_gthe3 is
@@ -3447,8 +3437,6 @@ entity eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top is
   attribute C_TX_USRCLK_FREQUENCY of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top : entity is "312.500000";
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
   attribute C_USER_GTPOWERGOOD_DELAY_EN of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top : entity is "eth_xcvr_gth_channel_gtwizard_top";
 end eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top;
 
 architecture STRUCTURE of eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top is

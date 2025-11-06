@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Wed Nov  5 12:45:53 2025
+// Date        : Wed Nov  5 12:45:52 2025
 // Host        : chenxun-Z790-UD-AC running 64-bit Ubuntu 24.04.3 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/eth_xcvr_gth_channel_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top eth_xcvr_gth_channel -prefix
+//               eth_xcvr_gth_channel_ eth_xcvr_gth_channel_sim_netlist.v
 // Design      : eth_xcvr_gth_channel
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1022,7 +1022,6 @@ module eth_xcvr_gth_channel
         .ubtxuart_out(NLW_inst_ubtxuart_out_UNCONNECTED[0]));
 endmodule
 
-(* ORIG_REF_NAME = "eth_xcvr_gth_channel_gthe3_channel_wrapper" *) 
 module eth_xcvr_gth_channel_eth_xcvr_gth_channel_gthe3_channel_wrapper
    (cpllfbclklost_out,
     cplllock_out,
@@ -2373,7 +2372,6 @@ module eth_xcvr_gth_channel_eth_xcvr_gth_channel_gthe3_channel_wrapper
         .txuserrdy_in(txuserrdy_in));
 endmodule
 
-(* ORIG_REF_NAME = "eth_xcvr_gth_channel_gtwizard_gthe3" *) 
 module eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_gthe3
    (gtwiz_userclk_tx_usrclk2_out,
     txoutclk_out,
@@ -3766,7 +3764,7 @@ endmodule
 (* C_TX_PLL_TYPE = "0" *) (* C_TX_REFCLK_FREQUENCY = "161.132812" *) (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
 (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "2" *) 
 (* C_TX_USER_CLOCKING_SOURCE = "0" *) (* C_TX_USER_DATA_WIDTH = "64" *) (* C_TX_USRCLK2_FREQUENCY = "156.250000" *) 
-(* C_TX_USRCLK_FREQUENCY = "312.500000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "0" *) (* ORIG_REF_NAME = "eth_xcvr_gth_channel_gtwizard_top" *) 
+(* C_TX_USRCLK_FREQUENCY = "312.500000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "0" *) 
 module eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top
    (gtwiz_userclk_tx_reset_in,
     gtwiz_userclk_tx_active_in,
@@ -5615,7 +5613,6 @@ module eth_xcvr_gth_channel_eth_xcvr_gth_channel_gtwizard_top
         .txuserrdy_in(txuserrdy_in));
 endmodule
 
-(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_5_gthe3_channel" *) 
 module eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gthe3_channel
    (cpllfbclklost_out,
     cplllock_out,
@@ -7369,7 +7366,6 @@ module eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gthe3_channel
         .TXUSRCLK2(gtwiz_userclk_tx_usrclk2_out));
 endmodule
 
-(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx" *) 
 module eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx
    (gtwiz_userclk_rx_usrclk2_out,
     gtwiz_userclk_rx_usrclk_out,
@@ -7446,7 +7442,6 @@ module eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_rx
         .Q(\gen_gtwiz_userclk_rx_main.gtwiz_userclk_rx_active_sync ));
 endmodule
 
-(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_5_gtwiz_userclk_tx" *) 
 module eth_xcvr_gth_channel_gtwizard_ultrascale_v1_7_5_gtwiz_userclk_tx
    (gtwiz_userclk_tx_usrclk2_out,
     gtwiz_userclk_tx_usrclk_out,

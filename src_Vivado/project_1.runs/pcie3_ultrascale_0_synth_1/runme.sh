@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1'
+HD_PWD='/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

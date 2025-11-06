@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Thu Nov  6 16:25:23 2025
+| Date             : Thu Nov  6 21:01:58 2025
 | Host             : chenxun-Z790-UD-AC running 64-bit Ubuntu 24.04.3 LTS
 | Command          : report_power -file fpga_power_routed.rpt -pb fpga_power_summary_routed.pb -rpx fpga_power_routed.rpx
 | Design           : fpga
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 6.379        |
+| Total On-Chip Power (W)  | 6.164        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 5.774        |
-| Device Static (W)        | 0.605        |
+| Dynamic (W)              | 5.567        |
+| Device Static (W)        | 0.597        |
 | Effective TJA (C/W)      | 1.9          |
-| Max Ambient (C)          | 88.2         |
-| Junction Temperature (C) | 36.8         |
+| Max Ambient (C)          | 88.6         |
+| Junction Temperature (C) | 36.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.478 |       26 |       --- |             --- |
-| CLB Logic                |     0.269 |   121396 |       --- |             --- |
-|   LUT as Logic           |     0.198 |    41500 |    203128 |           20.43 |
-|   LUT as Distributed RAM |     0.039 |     7069 |    112800 |            6.27 |
-|   Register               |     0.022 |    54805 |    406256 |           13.49 |
-|   LUT as Shift Register  |     0.006 |      187 |    112800 |            0.17 |
-|   CARRY8                 |     0.003 |     1140 |     30300 |            3.76 |
-|   F7/F8 Muxes            |    <0.001 |      928 |    242400 |            0.38 |
+| Clocks                   |     0.474 |       26 |       --- |             --- |
+| CLB Logic                |     0.290 |   119025 |       --- |             --- |
+|   LUT as Logic           |     0.213 |    40601 |    203128 |           19.99 |
+|   LUT as Distributed RAM |     0.046 |     7044 |    112800 |            6.24 |
+|   Register               |     0.023 |    53807 |    406256 |           13.24 |
+|   LUT as Shift Register  |     0.005 |       91 |    112800 |            0.08 |
+|   CARRY8                 |     0.003 |     1092 |     30300 |            3.60 |
+|   F7/F8 Muxes            |    <0.001 |      926 |    242400 |            0.38 |
 |   BUFG                   |    <0.001 |        1 |        80 |            1.25 |
-|   Others                 |     0.000 |     1157 |       --- |             --- |
-| Signals                  |     0.474 |   101609 |       --- |             --- |
-| Block RAM                |     1.460 |    462.5 |       540 |           85.65 |
+|   Others                 |     0.000 |     1146 |       --- |             --- |
+| Signals                  |     0.465 |    97850 |       --- |             --- |
+| Block RAM                |     1.245 |      270 |       540 |           50.00 |
 | MMCM                     |     0.007 |        1 |        10 |           10.00 |
 | I/O                      |     0.019 |       69 |       312 |           22.12 |
 | GTH                      |     2.768 |       10 |        16 |           62.50 |
 | Hard IPs                 |     0.298 |        1 |       --- |             --- |
 |   PCIE                   |     0.298 |        1 |         2 |           50.00 |
-| Static Power             |     0.605 |          |           |                 |
-| Total                    |     6.379 |          |           |                 |
+| Static Power             |     0.597 |          |           |                 |
+| Total                    |     6.164 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,10 +80,10 @@ Table of Contents
 +------------+-------------+-----------+-------------+------------+
 | Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +------------+-------------+-----------+-------------+------------+
-| Vccint     |       0.950 |     3.724 |       3.518 |      0.206 |
+| Vccint     |       0.950 |     3.508 |       3.305 |      0.203 |
 | Vccaux     |       1.800 |     0.103 |       0.004 |      0.099 |
 | Vccaux_io  |       1.800 |     0.071 |       0.006 |      0.065 |
-| Vccint_io  |       0.950 |     0.026 |       0.004 |      0.022 |
+| Vccint_io  |       0.950 |     0.026 |       0.004 |      0.021 |
 | Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18     |       1.800 |     0.003 |       0.003 |      0.000 |
@@ -91,7 +91,7 @@ Table of Contents
 | Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |
-| Vccbram    |       0.950 |     0.062 |       0.038 |      0.024 |
+| Vccbram    |       0.950 |     0.053 |       0.033 |      0.020 |
 | MGTAVcc    |       1.000 |     1.465 |       1.434 |      0.031 |
 | MGTAVtt    |       1.200 |     0.731 |       0.720 |      0.011 |
 | MGTVccaux  |       1.800 |     0.040 |       0.040 |      0.000 |
@@ -178,36 +178,36 @@ Table of Contents
 +----------------------------------------------+-----------+
 | Name                                         | Power (W) |
 +----------------------------------------------+-----------+
-| fpga                                         |     5.774 |
+| fpga                                         |     5.567 |
 |   clk_100mhz_ibufg_inst                      |     0.005 |
-|   core_inst                                  |     2.358 |
-|     core_inst                                |     2.245 |
-|       core_pcie_inst                         |     2.157 |
-|       pcie_if_inst                           |     0.087 |
+|   core_inst                                  |     2.134 |
+|     core_inst                                |     2.018 |
+|       core_pcie_inst                         |     1.929 |
+|       pcie_if_inst                           |     0.088 |
 |     mac[0].eth_mac_inst                      |     0.057 |
-|       axis_xgmii_rx_inst                     |     0.010 |
-|       axis_xgmii_tx_inst                     |     0.035 |
+|       axis_xgmii_rx_inst                     |     0.011 |
+|       axis_xgmii_tx_inst                     |     0.033 |
 |       mac_ctrl.mac_ctrl_rx_inst              |     0.005 |
 |       mac_ctrl.mac_ctrl_tx_inst              |     0.003 |
-|       mac_ctrl.mac_pause_ctrl_rx_inst        |     0.002 |
-|     mac[1].eth_mac_inst                      |     0.053 |
-|       axis_xgmii_rx_inst                     |     0.009 |
-|       axis_xgmii_tx_inst                     |     0.034 |
+|       mac_ctrl.mac_pause_ctrl_rx_inst        |     0.003 |
+|     mac[1].eth_mac_inst                      |     0.056 |
+|       axis_xgmii_rx_inst                     |     0.010 |
+|       axis_xgmii_tx_inst                     |     0.035 |
 |       mac_ctrl.mac_ctrl_rx_inst              |     0.004 |
 |       mac_ctrl.mac_ctrl_tx_inst              |     0.003 |
 |       mac_ctrl.mac_pause_ctrl_rx_inst        |     0.002 |
-|     sfp_rb_drp_inst                          |     0.002 |
-|   pcie3_ultrascale_inst                      |     2.783 |
-|     inst                                     |     2.783 |
-|       gt_top_i                               |     2.242 |
-|       pcie3_uscale_top_inst                  |     0.540 |
-|   sfp_phy_quad_inst                          |     0.603 |
-|     phy1.eth_xcvr_phy_1                      |     0.302 |
-|       phy_inst                               |     0.016 |
+|     sfp_rb_drp_inst                          |     0.003 |
+|   pcie3_ultrascale_inst                      |     2.782 |
+|     inst                                     |     2.782 |
+|       gt_top_i                               |     2.244 |
+|       pcie3_uscale_top_inst                  |     0.538 |
+|   sfp_phy_quad_inst                          |     0.620 |
+|     phy1.eth_xcvr_phy_1                      |     0.310 |
+|       phy_inst                               |     0.022 |
 |       xcvr_gth_com_us.eth_xcvr_gth_full_inst |     0.282 |
-|     phy2.eth_xcvr_phy_2                      |     0.300 |
-|       phy_inst                               |     0.015 |
-|       xcvr_gth.eth_xcvr_gth_channel_inst     |     0.281 |
+|     phy2.eth_xcvr_phy_2                      |     0.309 |
+|       phy_inst                               |     0.022 |
+|       xcvr_gth.eth_xcvr_gth_channel_inst     |     0.282 |
 +----------------------------------------------+-----------+
 
 

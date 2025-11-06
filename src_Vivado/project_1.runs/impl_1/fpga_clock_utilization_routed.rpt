@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date              : Thu Nov  6 16:25:28 2025
+| Date              : Thu Nov  6 21:02:02 2025
 | Host              : chenxun-Z790-UD-AC running 64-bit Ubuntu 24.04.3 LTS
 | Command           : report_clock_utilization -file fpga_clock_utilization_routed.rpt
 | Design            : fpga
@@ -49,14 +49,9 @@ Table of Contents
 33. Clock Region Cell Placement per Global Clock: Region X1Y2
 34. Clock Region Cell Placement per Global Clock: Region X2Y2
 35. Clock Region Cell Placement per Global Clock: Region X3Y2
-36. Clock Region Cell Placement per Global Clock: Region X0Y3
-37. Clock Region Cell Placement per Global Clock: Region X1Y3
-38. Clock Region Cell Placement per Global Clock: Region X2Y3
-39. Clock Region Cell Placement per Global Clock: Region X3Y3
-40. Clock Region Cell Placement per Global Clock: Region X0Y4
-41. Clock Region Cell Placement per Global Clock: Region X1Y4
-42. Clock Region Cell Placement per Global Clock: Region X2Y4
-43. Clock Region Cell Placement per Global Clock: Region X3Y4
+36. Clock Region Cell Placement per Global Clock: Region X1Y3
+37. Clock Region Cell Placement per Global Clock: Region X2Y3
+38. Clock Region Cell Placement per Global Clock: Region X3Y3
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -79,22 +74,22 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Root | Clock Delay Group | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock               | Driver Pin                                                                                                                                                                                                                                                                                 | Net                                                                                                                                                                                                                                                                       |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y47 | X3Y1         | X3Y2 |                   |                20 |       45829 |               0 |        4.000 | pcie_user_clk       | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/bufg_gt_userclk/O                                                                                                                                                                                                                            | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g1        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y44 | X3Y1         | X3Y2 |                   |                 2 |        2086 |               0 |        4.000 | pipe_clk            | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/bufg_gt_pclk/O                                                                                                                                                                                                                               | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK                                                                                                                                                                                                                    |
-| g2        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y38 | X3Y1         | X3Y2 |                   |                 1 |          33 |               0 |        2.000 | txoutclk_out[3]     | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/bufg_gt_coreclk/O                                                                                                                                                                                                                            | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                 |
+| g0        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y47 | X3Y1         | X2Y1 |                   |                14 |       44317 |               0 |        4.000 | pcie_user_clk       | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/bufg_gt_userclk/O                                                                                                                                                                                                                            | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g1        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y44 | X3Y1         | X2Y1 |                   |                 2 |        2086 |               0 |        4.000 | pipe_clk            | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/bufg_gt_pclk/O                                                                                                                                                                                                                               | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK                                                                                                                                                                                                                    |
+| g2        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y38 | X3Y1         | X2Y1 |                   |                 1 |          33 |               0 |        2.000 | txoutclk_out[3]     | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/bufg_gt_coreclk/O                                                                                                                                                                                                                            | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                 |
 | g3        | src0      | BUFG_GT/O       | None       | BUFG_GT_X0Y26 | X3Y1         | X3Y0 |                   |                 1 |           1 |               0 |        8.000 | mcap_clk            | pcie3_ultrascale_inst/inst/gt_top_i/bufg_mcap_clk/O                                                                                                                                                                                                                                        | pcie3_ultrascale_inst/inst/gt_top_i/MCAPCLK                                                                                                                                                                                                                               |
-| g4        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y84 | X3Y3         | X3Y3 |                   |                 6 |        1905 |               0 |        6.206 | sfp_1_rx_clk_int    | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk2_inst/O | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g5        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y85 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | rxoutclk_out[0]_2   | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst/O  | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]  |
-| g6        | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y87 | X3Y3         | X3Y3 |                   |                 3 |        1905 |               0 |        6.206 | sfp_2_rx_clk_int    | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk2_inst/O  | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
-| g7        | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y88 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | rxoutclk_out[0]_3   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst/O   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]   |
-| g8        | src3      | BUFG_GT/O       | None       | BUFG_GT_X0Y74 | X3Y3         | X2Y2 |                   |                 4 |        1623 |               0 |        6.206 | sfp_mgt_refclk      | bufg_gt_sfp_mgt_refclk_inst/O                                                                                                                                                                                                                                                              | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
-| g9        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y90 | X3Y3         | X3Y3 |                   |                 6 |        1350 |               0 |        6.206 | sfp_1_tx_clk_int    | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk2_inst/O | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g10       | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y91 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | txoutclk_out[0]     | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk_inst/O  | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]  |
-| g11       | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y93 | X3Y3         | X3Y3 |                   |                 4 |        1350 |               0 |        6.206 | sfp_2_tx_clk_int    | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk2_inst/O  | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
-| g12       | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y94 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | txoutclk_out[0]_1   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk_inst/O   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]   |
-| g13       | src4      | BUFGCE/O        | None       | BUFGCE_X0Y48  | X0Y2         | X2Y2 |                   |                 5 |         844 |               0 |        8.000 | clk_125mhz_mmcm_out | clk_125mhz_bufg_inst/O                                                                                                                                                                                                                                                                     | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g4        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y87 | X3Y3         | X3Y3 |                   |                 8 |        1905 |               0 |        6.206 | sfp_1_rx_clk_int    | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk2_inst/O | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g5        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y88 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | rxoutclk_out[0]_2   | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst/O  | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]  |
+| g6        | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y84 | X3Y3         | X3Y3 |                   |                 5 |        1905 |               0 |        6.206 | sfp_2_rx_clk_int    | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk2_inst/O  | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
+| g7        | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y85 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | rxoutclk_out[0]_3   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.bufg_gt_usrclk_inst/O   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]   |
+| g8        | src3      | BUFG_GT/O       | None       | BUFG_GT_X0Y72 | X3Y3         | X1Y2 |                   |                 7 |        1623 |               0 |        6.206 | sfp_mgt_refclk      | bufg_gt_sfp_mgt_refclk_inst/O                                                                                                                                                                                                                                                              | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9        | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y93 | X3Y3         | X3Y3 |                   |                 6 |        1350 |               0 |        6.206 | sfp_1_tx_clk_int    | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk2_inst/O | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g10       | src1      | BUFG_GT/O       | None       | BUFG_GT_X0Y94 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | txoutclk_out[0]     | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk_inst/O  | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]  |
+| g11       | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y90 | X3Y3         | X3Y3 |                   |                 5 |        1350 |               0 |        6.206 | sfp_2_tx_clk_int    | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk2_inst/O  | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
+| g12       | src2      | BUFG_GT/O       | None       | BUFG_GT_X0Y91 | X3Y3         | X3Y3 |                   |                 1 |           1 |               0 |        3.103 | txoutclk_out[0]_1   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk_inst/O   | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]   |
+| g13       | src4      | BUFGCE/O        | None       | BUFGCE_X0Y49  | X0Y2         | X1Y2 |                   |                 8 |         844 |               0 |        8.000 | clk_125mhz_mmcm_out | clk_125mhz_bufg_inst/O                                                                                                                                                                                                                                                                     | clk_125mhz_int                                                                                                                                                                                                                                                            |
 | g14       | src5      | BUFG_GT/O       | None       | BUFG_GT_X0Y27 | X3Y1         | X3Y0 |                   |                 2 |         237 |               0 |       10.000 | pcie_mgt_refclk     | pcie3_ultrascale_inst/inst/bufg_gt_sysclk/O                                                                                                                                                                                                                                                | pcie3_ultrascale_inst/inst/ext_ch_gt_drpclk                                                                                                                                                                                                                               |
-| g15       | src6      | BUFGCE/O        | None       | BUFGCE_X1Y32  | X2Y1         | X2Y1 | n/a               |                14 |           0 |            6476 |          n/a | n/a                 | pcie_user_reset_bufg_inst/O                                                                                                                                                                                                                                                                | pcie_user_reset                                                                                                                                                                                                                                                           |
+| g15       | src6      | BUFGCE/O        | None       | BUFGCE_X1Y8   | X2Y0         | X2Y0 | n/a               |                13 |           0 |            6485 |          n/a | n/a                 | pcie_user_reset_bufg_inst/O                                                                                                                                                                                                                                                                | pcie_user_reset                                                                                                                                                                                                                                                           |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -114,7 +109,7 @@ Table of Contents
 | src3      | g8             | IBUFDS_GTE3/ODIV2      | GTHE3_COMMON_X0Y3   | GTHE3_COMMON_X0Y3   | X3Y3         |           2 |               0 |               6.206 | sfp_mgt_refclk      | ibufds_gte3_sfp_mgt_refclk_inst/ODIV2                                                                                                                                                                                                                                                                                                           | sfp_mgt_refclk_int                                                                                                                                                                                                                                                                 |
 | src4      | g13            | MMCME3_ADV/CLKOUT0     | None                | MMCME3_ADV_X0Y2     | X0Y2         |           1 |               0 |               8.000 | clk_125mhz_mmcm_out | clk_mmcm_inst/CLKOUT0                                                                                                                                                                                                                                                                                                                           | clk_125mhz_mmcm_out                                                                                                                                                                                                                                                                |
 | src5      | g14            | IBUFDS_GTE3/ODIV2      | GTHE3_COMMON_X0Y1   | GTHE3_COMMON_X0Y1   | X3Y1         |           2 |               0 |              10.000 | pcie_mgt_refclk     | ibufds_gte3_pcie_mgt_refclk_inst/ODIV2                                                                                                                                                                                                                                                                                                          | pcie_sys_clk                                                                                                                                                                                                                                                                       |
-| src6      | g15            | FDRE/Q                 | None                | SLICE_X49Y91        | X2Y1         |           1 |               0 |                     |                     | pcie_user_reset_reg_2_reg_lopt_replica/Q                                                                                                                                                                                                                                                                                                        | Q_replN                                                                                                                                                                                                                                                                            |
+| src6      | g15            | FDRE/Q                 | None                | SLICE_X49Y31        | X2Y0         |           1 |               0 |                     |                     | pcie_user_reset_reg_2_reg_lopt_replica/Q                                                                                                                                                                                                                                                                                                        | Q_replN                                                                                                                                                                                                                                                                            |
 +-----------+----------------+------------------------+---------------------+---------------------+--------------+-------------+-----------------+---------------------+---------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -128,26 +123,26 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    1 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X0Y0              |    2 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
 | X1Y0              |    2 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X2Y0              |    2 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X2Y0              |    4 |    24 |    1 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
 | X3Y0              |    6 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
 | X0Y1              |    2 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
-| X1Y1              |    2 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X2Y1              |    3 |    24 |    1 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
-| X3Y1              |    7 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    5 |    24 |    0 |     0 |    0 |     0 |
-| X0Y2              |    2 |    24 |    1 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    1 |     1 |    0 |     2 |
-| X1Y2              |    3 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X2Y2              |    6 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
-| X3Y2              |   10 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
-| X0Y3              |    2 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
-| X1Y3              |    4 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X2Y3              |    8 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
-| X3Y3              |   12 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    9 |    24 |    0 |     0 |    0 |     0 |
-| X0Y4              |    1 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
-| X1Y4              |    1 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X2Y4              |    4 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
-| X3Y4              |    4 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X1Y1              |    6 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y1              |    8 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y1              |   10 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    5 |    24 |    0 |     0 |    0 |     0 |
+| X0Y2              |    8 |    24 |    1 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    1 |     1 |    0 |     2 |
+| X1Y2              |    8 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y2              |    8 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y2              |    7 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y3              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X1Y3              |    5 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y3              |    5 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y3              |   10 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    9 |    24 |    0 |     0 |    0 |     0 |
+| X0Y4              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X1Y4              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y4              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y4              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -160,26 +155,26 @@ Table of Contents
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 | Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
-| X0Y0              |      1 |      24 |      0 |   23040 |      0 |    5760 |     34 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X1Y0              |      2 |      24 |   2596 |   24000 |      0 |    6240 |     72 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X2Y0              |      2 |      24 |   7452 |   25920 |      5 |    7200 |     45 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
-| X3Y0              |      6 |      24 |   8515 |   24000 |     33 |    3360 |     44 |      48 |      0 |      48 |      4 |       4 |      1 |       1 |
-| X0Y1              |      2 |      24 |    143 |   23040 |      0 |    5760 |     54 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X1Y1              |      2 |      24 |   1999 |   24000 |     98 |    6240 |     72 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X2Y1              |      3 |      24 |   7267 |   25920 |     88 |    7200 |     44 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
-| X3Y1              |      7 |      24 |   4949 |   24000 |     44 |    3360 |     48 |      48 |      0 |      48 |      4 |       4 |      0 |       0 |
-| X0Y2              |      2 |      24 |     61 |   23040 |      0 |    5760 |     44 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X1Y2              |      3 |      24 |   1475 |   24000 |      8 |    6240 |     71 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X2Y2              |      6 |      24 |   5921 |   25920 |      1 |    7200 |     47 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
-| X3Y2              |     10 |      24 |   3991 |   24000 |      6 |    3360 |     48 |      48 |      0 |      48 |      0 |       4 |      0 |       0 |
-| X0Y3              |      2 |      24 |     76 |   23040 |      0 |    5760 |     30 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X1Y3              |      4 |      24 |    914 |   24000 |      0 |    6240 |     70 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X2Y3              |      8 |      24 |   4344 |   25920 |      0 |    7200 |     48 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
-| X3Y3              |     12 |      24 |   4621 |   24000 |      0 |    3360 |     47 |      48 |      0 |      48 |      2 |       4 |      0 |       1 |
-| X0Y4              |      1 |      24 |      0 |   23040 |      0 |    5760 |     10 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X1Y4              |      1 |      24 |      1 |   24000 |      0 |    6240 |     49 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
-| X2Y4              |      4 |      24 |    462 |   25920 |      0 |    7200 |     37 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
-| X3Y4              |      4 |      24 |     18 |   24000 |      0 |    3360 |     11 |      48 |      0 |      48 |      0 |       4 |      0 |       1 |
+| X0Y0              |      2 |      24 |   5022 |   23040 |     64 |    5760 |     48 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y0              |      2 |      24 |   6126 |   24000 |     10 |    6240 |     58 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y0              |      4 |      24 |   7243 |   25920 |      0 |    7200 |     48 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y0              |      6 |      24 |   6751 |   24000 |      4 |    3360 |     20 |      48 |      0 |      48 |      4 |       4 |      1 |       1 |
+| X0Y1              |      2 |      24 |   4079 |   23040 |     64 |    5760 |     55 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y1              |      6 |      24 |   5503 |   24000 |      5 |    6240 |     65 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y1              |      8 |      24 |   6515 |   25920 |      8 |    7200 |     48 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y1              |     10 |      24 |   2036 |   24000 |      0 |    3360 |     44 |      48 |      0 |      48 |      4 |       4 |      0 |       0 |
+| X0Y2              |      8 |      24 |    406 |   23040 |      0 |    5760 |     13 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y2              |      8 |      24 |   4051 |   24000 |      0 |    6240 |     47 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y2              |      8 |      24 |   2683 |   25920 |      0 |    7200 |     48 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y2              |      7 |      24 |    439 |   24000 |      0 |    3360 |     34 |      48 |      0 |      48 |      0 |       4 |      0 |       0 |
+| X0Y3              |      0 |      24 |      0 |   23040 |      0 |    5760 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y3              |      5 |      24 |   2053 |   24000 |      0 |    6240 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y3              |      5 |      24 |    201 |   25920 |      0 |    7200 |     12 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y3              |     10 |      24 |    699 |   24000 |      0 |    3360 |      0 |      48 |      0 |      48 |      2 |       4 |      0 |       1 |
+| X0Y4              |      0 |      24 |      0 |   23040 |      0 |    5760 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y4              |      0 |      24 |      0 |   24000 |      0 |    6240 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y4              |      0 |      24 |      0 |   25920 |      0 |    7200 |      0 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y4              |      0 |      24 |      0 |   24000 |      0 |    3360 |      0 |      48 |      0 |      48 |      0 |       4 |      0 |       1 |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -191,11 +186,11 @@ All Modules
 +----+----+----+----+----+
 |    | X0 | X1 | X2 | X3 |
 +----+----+----+----+----+
-| Y4 |  1 |  1 |  5 |  4 |
-| Y3 |  2 |  4 | 12 | 12 |
-| Y2 |  1 |  2 |  8 |  8 |
-| Y1 |  2 |  2 |  5 |  5 |
-| Y0 |  1 |  2 |  4 |  6 |
+| Y4 |  0 |  0 |  0 |  0 |
+| Y3 |  0 |  5 |  8 |  9 |
+| Y2 |  8 |  8 | 16 |  7 |
+| Y1 |  2 |  6 | 13 |  8 |
+| Y0 |  2 |  2 |  6 |  6 |
 +----+----+----+----+----+
 
 
@@ -208,26 +203,26 @@ All Modules
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 | Clock Region Name | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% |
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
-| X0Y0              |    0 |    24 |  0.00 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y0              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
 | X1Y0              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X2Y0              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
-| X3Y0              |    0 |    24 |  0.00 |    6 |    24 | 25.00 |    2 |    24 |  8.33 |    5 |    24 | 20.83 |
+| X2Y0              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    4 |    24 | 16.67 |
+| X3Y0              |    0 |    24 |  0.00 |    6 |    24 | 25.00 |    2 |    24 |  8.33 |    2 |    24 |  8.33 |
 | X0Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X1Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X2Y1              |    0 |    24 |  0.00 |    3 |    24 | 12.50 |    0 |    24 |  0.00 |    2 |    24 |  8.33 |
-| X3Y1              |    5 |    24 | 20.83 |    5 |    24 | 20.83 |    2 |    24 |  8.33 |    3 |    24 | 12.50 |
-| X0Y2              |    1 |    24 |  4.17 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X1Y2              |    1 |    24 |  4.17 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X2Y2              |    1 |    24 |  4.17 |    6 |    24 | 25.00 |    1 |    24 |  4.17 |    3 |    24 | 12.50 |
-| X3Y2              |    0 |    24 |  0.00 |    8 |    24 | 33.33 |    3 |    24 | 12.50 |    7 |    24 | 29.17 |
-| X0Y3              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X1Y3              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X2Y3              |    1 |    24 |  4.17 |    8 |    24 | 33.33 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
-| X3Y3              |    9 |    24 | 37.50 |   12 |    24 | 50.00 |    0 |    24 |  0.00 |    9 |    24 | 37.50 |
-| X0Y4              |    0 |    24 |  0.00 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X1Y4              |    0 |    24 |  0.00 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X2Y4              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
-| X3Y4              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y1              |    0 |    24 |  0.00 |    6 |    24 | 25.00 |    0 |    24 |  0.00 |    2 |    24 |  8.33 |
+| X2Y1              |    3 |    24 | 12.50 |    7 |    24 | 29.17 |    0 |    24 |  0.00 |    4 |    24 | 16.67 |
+| X3Y1              |    5 |    24 | 20.83 |    8 |    24 | 33.33 |    2 |    24 |  8.33 |    2 |    24 |  8.33 |
+| X0Y2              |    1 |    24 |  4.17 |    8 |    24 | 33.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y2              |    1 |    24 |  4.17 |    8 |    24 | 33.33 |    1 |    24 |  4.17 |    2 |    24 |  8.33 |
+| X2Y2              |    0 |    24 |  0.00 |    8 |    24 | 33.33 |    0 |    24 |  0.00 |    2 |    24 |  8.33 |
+| X3Y2              |    0 |    24 |  0.00 |    7 |    24 | 29.17 |    0 |    24 |  0.00 |    4 |    24 | 16.67 |
+| X0Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y3              |    1 |    24 |  4.17 |    5 |    24 | 20.83 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
+| X2Y3              |    1 |    24 |  4.17 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y3              |    9 |    24 | 37.50 |    9 |    24 | 37.50 |    0 |    24 |  0.00 |    8 |    24 | 33.33 |
+| X0Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 
 
@@ -237,7 +232,7 @@ All Modules
 +-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                       |
 +-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------+
-| g0        | BUFG_GT/O       | X3Y1              | pcie_user_clk |       4.000 | {0.000 2.000} | X3Y2     |       44325 |        0 |              0 |        0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
+| g0        | BUFG_GT/O       | X3Y1              | pcie_user_clk |       4.000 | {0.000 2.000} | X2Y1     |       43007 |        0 |              0 |        0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
 +-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -245,15 +240,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+-------+-------+-----------+
-|    | X0   | X1    | X2    | X3        |
-+----+------+-------+-------+-----------+
-| Y4 |    5 |    26 |   481 |        24 |
-| Y3 |   91 |   933 |  1506 |       178 |
-| Y2 |   83 |  1521 |  5024 |  (R) 3376 |
-| Y1 |  170 |  2134 |  7377 |  (D) 4887 |
-| Y0 |   17 |  2632 |  7480 |      6380 |
-+----+------+-------+-------+-----------+
++----+-------+-------+----------+----------+
+|    | X0    | X1    | X2       | X3       |
++----+-------+-------+----------+----------+
+| Y4 |     0 |     0 |        0 |        0 |
+| Y3 |     0 |  1099 |      160 |        0 |
+| Y2 |   148 |  1819 |      632 |       26 |
+| Y1 |  4171 |  4969 | (R) 5856 |  (D) 894 |
+| Y0 |  5112 |  6167 |     7267 |     4687 |
++----+-------+-------+----------+----------+
 
 
 9. Device Cell Placement Summary for Global Clock g1
@@ -262,7 +257,7 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                    |
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------+
-| g1        | BUFG_GT/O       | X3Y1              | pipe_clk |       4.000 | {0.000 2.000} | X3Y2     |        2054 |        0 |              0 |        8 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK |
+| g1        | BUFG_GT/O       | X3Y1              | pipe_clk |       4.000 | {0.000 2.000} | X2Y1     |        2054 |        0 |              0 |        8 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK |
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -270,15 +265,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+----+----+---------+
-|    | X0 | X1 | X2 | X3      |
-+----+----+----+----+---------+
-| Y4 |  0 |  0 |  0 |       0 |
-| Y3 |  0 |  0 |  0 |       0 |
-| Y2 |  0 |  0 |  0 |   (R) 0 |
-| Y1 |  0 |  0 |  0 |  (D) 95 |
-| Y0 |  0 |  0 |  0 |    1967 |
-+----+----+----+----+---------+
++----+----+----+-------+----------+
+|    | X0 | X1 | X2    | X3       |
++----+----+----+-------+----------+
+| Y4 |  0 |  0 |     0 |        0 |
+| Y3 |  0 |  0 |     0 |        0 |
+| Y2 |  0 |  0 |     0 |        0 |
+| Y1 |  0 |  0 | (R) 0 |  (D) 191 |
+| Y0 |  0 |  0 |     0 |     1871 |
++----+----+----+-------+----------+
 
 
 10. Device Cell Placement Summary for Global Clock g2
@@ -287,7 +282,7 @@ All Modules
 +-----------+-----------------+-------------------+-----------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock           | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                       |
 +-----------+-----------------+-------------------+-----------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------+
-| g2        | BUFG_GT/O       | X3Y1              | txoutclk_out[3] |       2.000 | {0.000 1.000} | X3Y2     |          15 |        0 |              0 |        0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK |
+| g2        | BUFG_GT/O       | X3Y1              | txoutclk_out[3] |       2.000 | {0.000 1.000} | X2Y1     |          15 |        0 |              0 |        0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK |
 +-----------+-----------------+-------------------+-----------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -295,15 +290,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+----+----+--------+
-|    | X0 | X1 | X2 | X3     |
-+----+----+----+----+--------+
-| Y4 |  0 |  0 |  0 |      0 |
-| Y3 |  0 |  0 |  0 |      0 |
-| Y2 |  0 |  0 |  0 |  (R) 0 |
-| Y1 |  0 |  0 |  0 |  (D) 0 |
-| Y0 |  0 |  0 |  0 |     15 |
-+----+----+----+----+--------+
++----+----+----+-------+--------+
+|    | X0 | X1 | X2    | X3     |
++----+----+----+-------+--------+
+| Y4 |  0 |  0 |     0 |      0 |
+| Y3 |  0 |  0 |     0 |      0 |
+| Y2 |  0 |  0 |     0 |      0 |
+| Y1 |  0 |  0 | (R) 0 |  (D) 0 |
+| Y0 |  0 |  0 |     0 |     15 |
++----+----+----+-------+--------+
 
 
 11. Device Cell Placement Summary for Global Clock g3
@@ -345,15 +340,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+----+-------+-------------+
-|    | X0 | X1 | X2    | X3          |
-+----+----+----+-------+-------------+
-| Y4 |  0 |  0 |     1 |           0 |
-| Y3 |  0 |  1 |  1114 | (R) (D) 752 |
-| Y2 |  0 |  0 |    21 |          16 |
-| Y1 |  0 |  0 |     0 |           0 |
-| Y0 |  0 |  0 |     0 |           0 |
-+----+----+----+-------+-------------+
++----+----+-----+------+------------+
+|    | X0 | X1  | X2   | X3         |
++----+----+-----+------+------------+
+| Y4 |  0 |   0 |    0 |          0 |
+| Y3 |  0 |   0 |    0 | (R) (D) 35 |
+| Y2 |  1 |   4 |   91 |        182 |
+| Y1 |  0 |  22 |  686 |        884 |
+| Y0 |  0 |   0 |    0 |          0 |
++----+----+-----+------+------------+
 
 
 13. Device Cell Placement Summary for Global Clock g5
@@ -395,15 +390,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+----+----+--------------+
-|    | X0 | X1 | X2 | X3           |
-+----+----+----+----+--------------+
-| Y4 |  0 |  0 |  0 |            0 |
-| Y3 |  0 |  0 |  1 | (R) (D) 1883 |
-| Y2 |  0 |  0 |  0 |           21 |
-| Y1 |  0 |  0 |  0 |            0 |
-| Y0 |  0 |  0 |  0 |            0 |
-+----+----+----+----+--------------+
++----+----+-----+-------+------------+
+|    | X0 | X1  | X2    | X3         |
++----+----+-----+-------+------------+
+| Y4 |  0 |   0 |     0 |          0 |
+| Y3 |  0 |   0 |     0 | (R) (D) 47 |
+| Y2 |  1 |  14 |  1740 |        103 |
+| Y1 |  0 |   0 |     0 |          0 |
+| Y0 |  0 |   0 |     0 |          0 |
++----+----+-----+-------+------------+
 
 
 15. Device Cell Placement Summary for Global Clock g7
@@ -437,7 +432,7 @@ All Modules
 +-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock          | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                 |
 +-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------+
-| g8        | BUFG_GT/O       | X3Y3              | sfp_mgt_refclk |       6.206 | {0.000 3.103} | X2Y2     |        1623 |        0 |              0 |        0 | sfp_mgt_refclk_bufg |
+| g8        | BUFG_GT/O       | X3Y3              | sfp_mgt_refclk |       6.206 | {0.000 3.103} | X1Y2     |        1623 |        0 |              0 |        0 | sfp_mgt_refclk_bufg |
 +-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -445,15 +440,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+----+---------+----------+
-|    | X0 | X1 | X2      | X3       |
-+----+----+----+---------+----------+
-| Y4 |  0 |  0 |       0 |        0 |
-| Y3 |  0 |  0 |     676 |  (D) 277 |
-| Y2 |  0 |  0 | (R) 649 |       21 |
-| Y1 |  0 |  0 |       0 |        0 |
-| Y0 |  0 |  0 |       0 |        0 |
-+----+----+----+---------+----------+
++----+----+---------+------+--------+
+|    | X0 | X1      | X2   | X3     |
++----+----+---------+------+--------+
+| Y4 |  0 |       0 |    0 |      0 |
+| Y3 |  0 |     886 |    0 |  (D) 0 |
+| Y2 |  1 | (R) 449 |  136 |    133 |
+| Y1 |  0 |       0 |    6 |     12 |
+| Y0 |  0 |       0 |    0 |      0 |
++----+----+---------+------+--------+
 
 
 17. Device Cell Placement Summary for Global Clock g9
@@ -470,15 +465,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+-----+------+-------------+
-|    | X0 | X1  | X2   | X3          |
-+----+----+-----+------+-------------+
-| Y4 |  0 |   0 |    1 |           0 |
-| Y3 |  0 |  19 |  718 | (R) (D) 186 |
-| Y2 |  0 |   0 |  226 |         200 |
-| Y1 |  0 |   0 |    0 |           0 |
-| Y0 |  0 |   0 |    0 |           0 |
-+----+----+-----+------+-------------+
++----+-----+------+-----+------------+
+|    | X0  | X1   | X2  | X3         |
++----+-----+------+-----+------------+
+| Y4 |   0 |    0 |   0 |          0 |
+| Y3 |   0 |    0 |   0 | (R) (D) 14 |
+| Y2 |  73 |  637 |  69 |          5 |
+| Y1 |   0 |  552 |   0 |          0 |
+| Y0 |   0 |    0 |   0 |          0 |
++----+-----+------+-----+------------+
 
 
 18. Device Cell Placement Summary for Global Clock g10
@@ -520,15 +515,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+----+------+--------------+
-|    | X0 | X1 | X2   | X3           |
-+----+----+----+------+--------------+
-| Y4 |  0 |  0 |    1 |            0 |
-| Y3 |  0 |  0 |  296 | (R) (D) 1042 |
-| Y2 |  0 |  0 |    0 |           11 |
-| Y1 |  0 |  0 |    0 |            0 |
-| Y0 |  0 |  0 |    0 |            0 |
-+----+----+----+------+--------------+
++----+------+-------+----+------------+
+|    | X0   | X1    | X2 | X3         |
++----+------+-------+----+------------+
+| Y4 |    0 |     0 |  0 |          0 |
+| Y3 |    0 |    68 |  0 | (R) (D) 16 |
+| Y2 |  133 |  1129 |  4 |          0 |
+| Y1 |    0 |     0 |  0 |          0 |
+| Y0 |    0 |     0 |  0 |          0 |
++----+------+-------+----+------------+
 
 
 20. Device Cell Placement Summary for Global Clock g12
@@ -562,7 +557,7 @@ All Modules
 +-----------+-----------------+-------------------+---------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock               | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net            |
 +-----------+-----------------+-------------------+---------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
-| g13       | BUFGCE/O        | X0Y2              | clk_125mhz_mmcm_out |       8.000 | {0.000 4.000} | X2Y2     |         841 |        0 |              0 |        3 | clk_125mhz_int |
+| g13       | BUFGCE/O        | X0Y2              | clk_125mhz_mmcm_out |       8.000 | {0.000 4.000} | X1Y2     |         841 |        0 |              0 |        3 | clk_125mhz_int |
 +-----------+-----------------+-------------------+---------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -570,15 +565,15 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+--------+----+--------+------+
-|    | X0     | X1 | X2     | X3   |
-+----+--------+----+--------+------+
-| Y4 |      0 |  0 |      0 |    0 |
-| Y3 |      0 |  0 |     58 |  337 |
-| Y2 |  (D) 0 |  0 | (R) 29 |  380 |
-| Y1 |      0 |  0 |      0 |   40 |
-| Y0 |      0 |  0 |      0 |    0 |
-+----+--------+----+--------+------+
++----+---------+--------+-----+------+
+|    | X0      | X1     | X2  | X3   |
++----+---------+--------+-----+------+
+| Y4 |       0 |      0 |   0 |    0 |
+| Y3 |       0 |      0 |  48 |  594 |
+| Y2 |  (D) 56 | (R) 31 |  39 |    7 |
+| Y1 |       0 |      0 |   2 |   67 |
+| Y0 |       0 |      0 |   0 |    0 |
++----+---------+--------+-----+------+
 
 
 22. Device Cell Placement Summary for Global Clock g14
@@ -601,8 +596,8 @@ All Modules
 | Y4 |  0 |  0 |  0 |       0 |
 | Y3 |  0 |  0 |  0 |       0 |
 | Y2 |  0 |  0 |  0 |       0 |
-| Y1 |  0 |  0 |  0 |   (D) 4 |
-| Y0 |  0 |  0 |  0 | (R) 225 |
+| Y1 |  0 |  0 |  0 |  (D) 20 |
+| Y0 |  0 |  0 |  0 | (R) 209 |
 +----+----+----+----+---------+
 
 
@@ -612,7 +607,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net             |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------+
-| g15       | BUFGCE/O        | X2Y1              |       |             |               | X2Y1     |        6476 |        0 |              0 |        0 | pcie_user_reset |
+| g15       | BUFGCE/O        | X2Y0              |       |             |               | X2Y0     |        6485 |        0 |              0 |        0 | pcie_user_reset |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -620,25 +615,26 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+------+--------------+-------+
-|    | X0  | X1   | X2           | X3    |
-+----+-----+------+--------------+-------+
-| Y4 |   0 |    0 |            0 |     0 |
-| Y3 |  21 |  130 |          356 |    26 |
-| Y2 |   0 |  263 |          948 |   453 |
-| Y1 |   2 |  311 | (R) (D) 1468 |  1068 |
-| Y0 |   0 |  156 |          763 |   511 |
-+----+-----+------+--------------+-------+
++----+-------+-------+-------------+------+
+|    | X0    | X1    | X2          | X3   |
++----+-------+-------+-------------+------+
+| Y4 |     0 |     0 |           0 |    0 |
+| Y3 |     0 |   266 |           3 |    0 |
+| Y2 |    78 |   492 |         191 |    0 |
+| Y1 |   866 |  1170 |         551 |  255 |
+| Y0 |  1026 |   563 | (R) (D) 762 |  262 |
++----+-------+-------+-------------+------+
 
 
 24. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |          17 |               0 |  0 |      0 |   17 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |        5112 |               0 | 5022 |     64 |   26 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
+| g15       | 8     | BUFGCE/O        | None       |           0 |            1026 | 1009 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -650,8 +646,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        2632 |               0 | 2596 |      0 |   36 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             156 |  154 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
+| g0        | 23    | BUFG_GT/O       | None       |        6167 |               0 | 6126 |     10 |   31 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             563 |  552 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -664,12 +660,15 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        7480 |               0 | 7452 |      5 |   23 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             763 |  755 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
+| g0        | 23    | BUFG_GT/O       | None       |        7267 |               0 | 7243 |      0 |   24 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
+| g1+       | 20    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK    |
+| g2+       | 14    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             762 |  753 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
 27. Clock Region Cell Placement per Global Clock: Region X3Y0
@@ -678,12 +677,12 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        6380 |               0 | 6336 |     29 |   14 |   0 |  0 |    0 |   0 |       1 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g1        | 20    | BUFG_GT/O       | None       |        1967 |               0 | 1962 |      0 |    0 |   0 |  4 |    0 |   0 |       1 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK    |
-| g14       | 3     | BUFG_GT/O       | None       |         225 |               0 |  217 |      4 |    0 |   0 |  4 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/ext_ch_gt_drpclk               |
+| g0        | 23    | BUFG_GT/O       | None       |        4687 |               0 | 4684 |      0 |    2 |   0 |  0 |    0 |   0 |       1 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
+| g1        | 20    | BUFG_GT/O       | None       |        1871 |               0 | 1866 |      0 |    0 |   0 |  4 |    0 |   0 |       1 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK    |
+| g14       | 3     | BUFG_GT/O       | None       |         209 |               0 |  201 |      4 |    0 |   0 |  4 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/ext_ch_gt_drpclk               |
 | g2        | 14    | BUFG_GT/O       | None       |          15 |               0 |    0 |      0 |   14 |   0 |  0 |    0 |   0 |       1 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK |
 | g3        | 2     | BUFG_GT/O       | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       1 | pcie3_ultrascale_inst/inst/gt_top_i/MCAPCLK               |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             511 |  489 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             262 |  248 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -693,12 +692,12 @@ All Modules
 28. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |         170 |               0 | 143 |      0 |   27 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g15       | 8     | BUFGCE/O        | None       |           0 |               2 |   2 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |        4171 |               0 | 4079 |     64 |   28 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             866 |  847 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -707,27 +706,37 @@ All Modules
 29. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        2134 |               0 | 1999 |     98 |   37 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             311 |  305 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |        4969 |               0 | 4930 |      5 |   34 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g4        | 15    | BUFG_GT/O       | None       |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g8+       | 0     | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9        | 21    | BUFG_GT/O       | None       |         552 |               0 |  551 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g13+      | 1     | BUFGCE/O        | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g15       | 8     | BUFGCE/O        | None       |           0 |            1170 | 1154 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
 30. Clock Region Cell Placement per Global Clock: Region X2Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        7377 |               0 | 7267 |     88 |   22 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g13+      | 0     | BUFGCE/O        | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                            |
-| g15       | 8     | BUFGCE/O        | None       |           0 |            1468 | 1444 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |        5856 |               0 | 5823 |      8 |   25 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g1+       | 20    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK                                                                                                                                                                                                                    |
+| g4        | 15    | BUFG_GT/O       | None       |         686 |               0 |  684 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g8        | 0     | BUFG_GT/O       | None       |           6 |               0 |    6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9+       | 21    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g13       | 1     | BUFGCE/O        | None       |           2 |               0 |    2 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g2+       | 14    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                 |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             551 |  538 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -737,17 +746,20 @@ All Modules
 31. Clock Region Cell Placement per Global Clock: Region X3Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        4887 |               0 | 4819 |     44 |   24 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g1        | 20    | BUFG_GT/O       | None       |          95 |               0 |   91 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK    |
-| g13       | 0     | BUFGCE/O        | None       |          40 |               0 |   39 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                            |
-| g14       | 3     | BUFG_GT/O       | None       |           4 |               0 |    0 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/ext_ch_gt_drpclk               |
-| g2+       | 14    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK |
-| g3+       | 2     | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/MCAPCLK               |
-| g15       | 8     | BUFGCE/O        | None       |           0 |            1068 | 1053 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |         894 |               0 | 872 |      0 |   22 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g1        | 20    | BUFG_GT/O       | None       |         191 |               0 | 187 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK                                                                                                                                                                                                                    |
+| g4        | 15    | BUFG_GT/O       | None       |         884 |               0 | 883 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g8        | 0     | BUFG_GT/O       | None       |          12 |               0 |  12 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9+       | 21    | BUFG_GT/O       | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g13       | 1     | BUFGCE/O        | None       |          67 |               0 |  66 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g14       | 3     | BUFG_GT/O       | None       |          20 |               0 |  16 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/ext_ch_gt_drpclk                                                                                                                                                                                                                               |
+| g2+       | 14    | BUFG_GT/O       | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                 |
+| g3+       | 2     | BUFG_GT/O       | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/MCAPCLK                                                                                                                                                                                                                               |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             255 | 252 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -757,32 +769,41 @@ All Modules
 32. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |          83 |               0 | 61 |      0 |   22 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g13+      | 0     | BUFGCE/O        | None       |           0 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |         148 |               0 | 141 |      0 |    7 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g4        | 15    | BUFG_GT/O       | None       |           1 |               0 |   1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g6        | 12    | BUFG_GT/O       | None       |           1 |               0 |   1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
+| g8        | 0     | BUFG_GT/O       | None       |           1 |               0 |   1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9        | 21    | BUFG_GT/O       | None       |          73 |               0 |  73 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g11       | 18    | BUFG_GT/O       | None       |         133 |               0 | 133 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
+| g13       | 1     | BUFGCE/O        | None       |          56 |               0 |  56 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g15       | 8     | BUFGCE/O        | None       |           0 |              78 |  78 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
 33. Clock Region Cell Placement per Global Clock: Region X1Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        1521 |               0 | 1475 |      8 |   38 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g13+      | 0     | BUFGCE/O        | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                            |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             263 |  259 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |        1819 |               0 | 1794 |      0 |   25 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g4        | 15    | BUFG_GT/O       | None       |           4 |               0 |    4 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g6        | 12    | BUFG_GT/O       | None       |          14 |               0 |   14 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
+| g8        | 0     | BUFG_GT/O       | None       |         449 |               0 |  449 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9        | 21    | BUFG_GT/O       | None       |         637 |               0 |  634 |      0 |    3 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g11       | 18    | BUFG_GT/O       | None       |        1129 |               0 | 1125 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
+| g13       | 1     | BUFGCE/O        | None       |          31 |               0 |   31 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             492 |  482 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
 34. Clock Region Cell Placement per Global Clock: Region X2Y2
@@ -791,12 +812,14 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        5024 |               0 | 4999 |      1 |   24 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g4        | 12    | BUFG_GT/O       | None       |          21 |               0 |   20 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g8        | 2     | BUFG_GT/O       | None       |         649 |               0 |  649 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
-| g9        | 18    | BUFG_GT/O       | None       |         226 |               0 |  224 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g13       | 0     | BUFGCE/O        | None       |          29 |               0 |   29 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             948 |  926 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
+| g0        | 23    | BUFG_GT/O       | None       |         632 |               0 |  607 |      0 |   25 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g4        | 15    | BUFG_GT/O       | None       |          91 |               0 |   91 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g6        | 12    | BUFG_GT/O       | None       |        1740 |               0 | 1737 |      0 |    3 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
+| g8        | 0     | BUFG_GT/O       | None       |         136 |               0 |  136 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9        | 21    | BUFG_GT/O       | None       |          69 |               0 |   69 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g11       | 18    | BUFG_GT/O       | None       |           4 |               0 |    4 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
+| g13       | 1     | BUFGCE/O        | None       |          39 |               0 |   39 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             191 |  187 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -806,153 +829,76 @@ All Modules
 35. Clock Region Cell Placement per Global Clock: Region X3Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        3376 |               0 | 3344 |      6 |   26 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g1+       | 20    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_PCLK                                                                                                                                                                                                                    |
-| g4        | 12    | BUFG_GT/O       | None       |          16 |               0 |   16 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g6        | 15    | BUFG_GT/O       | None       |          21 |               0 |   21 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
-| g8        | 2     | BUFG_GT/O       | None       |          21 |               0 |   21 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
-| g9        | 18    | BUFG_GT/O       | None       |         200 |               0 |  200 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g11       | 21    | BUFG_GT/O       | None       |          11 |               0 |    9 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
-| g13       | 0     | BUFGCE/O        | None       |         380 |               0 |  380 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
-| g2+       | 14    | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_CORECLK                                                                                                                                                                                                                 |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             453 |  447 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |          26 |               0 |   9 |      0 |   17 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
+| g4        | 15    | BUFG_GT/O       | None       |         182 |               0 | 182 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g6        | 12    | BUFG_GT/O       | None       |         103 |               0 | 103 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
+| g8        | 0     | BUFG_GT/O       | None       |         133 |               0 | 133 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9        | 21    | BUFG_GT/O       | None       |           5 |               0 |   5 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g11+      | 18    | BUFG_GT/O       | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
+| g13       | 1     | BUFGCE/O        | None       |           7 |               0 |   7 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 **** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
-36. Clock Region Cell Placement per Global Clock: Region X0Y3
+36. Clock Region Cell Placement per Global Clock: Region X1Y3
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |          91 |               0 | 76 |      0 |   15 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-| g15       | 8     | BUFGCE/O        | None       |           0 |              21 | 20 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                      |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |        1099 |               0 | 1099 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                |
+| g8        | 0     | BUFG_GT/O       | None       |         886 |               0 |  886 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                      |
+| g11       | 18    | BUFG_GT/O       | None       |          68 |               0 |   68 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g13+      | 1     | BUFGCE/O        | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                           |
+| g15       | 8     | BUFGCE/O        | None       |           0 |             266 |  265 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                          |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
-37. Clock Region Cell Placement per Global Clock: Region X1Y3
+37. Clock Region Cell Placement per Global Clock: Region X2Y3
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                      |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 23    | BUFG_GT/O       | None       |         160 |               0 | 153 |      0 |    7 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                |
+| g8+       | 0     | BUFG_GT/O       | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                      |
+| g11+      | 18    | BUFG_GT/O       | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g13       | 1     | BUFGCE/O        | None       |          48 |               0 |  48 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                           |
+| g15       | 8     | BUFGCE/O        | None       |           0 |               3 |   3 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                          |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
+
+
+38. Clock Region Cell Placement per Global Clock: Region X3Y3
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |         933 |               0 | 896 |      0 |   37 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g4        | 12    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g9        | 18    | BUFG_GT/O       | None       |          19 |               0 |  18 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             130 | 128 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
+| g4        | 15    | BUFG_GT/O       | None       |          35 |               0 |  34 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
+| g6        | 12    | BUFG_GT/O       | None       |          47 |               0 |  46 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
+| g8+       | 0     | BUFG_GT/O       | None       |           0 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
+| g9        | 21    | BUFG_GT/O       | None       |          14 |               0 |  13 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
+| g11       | 18    | BUFG_GT/O       | None       |          16 |               0 |  15 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
+| g13       | 1     | BUFGCE/O        | None       |         594 |               0 | 591 |      0 |    0 |   0 |  2 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
+| g5        | 16    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]  |
+| g10       | 22    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]  |
+| g7        | 13    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]   |
+| g12       | 19    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]   |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-38. Clock Region Cell Placement per Global Clock: Region X2Y3
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |        1506 |               0 | 1482 |      0 |   24 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g4        | 12    | BUFG_GT/O       | None       |        1114 |               0 | 1114 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g6        | 15    | BUFG_GT/O       | None       |           1 |               0 |    0 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
-| g8        | 2     | BUFG_GT/O       | None       |         676 |               0 |  676 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
-| g9        | 18    | BUFG_GT/O       | None       |         718 |               0 |  718 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g11       | 21    | BUFG_GT/O       | None       |         296 |               0 |  296 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
-| g13       | 0     | BUFGCE/O        | None       |          58 |               0 |   58 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
-| g15       | 8     | BUFGCE/O        | None       |           0 |             356 |  349 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-39. Clock Region Cell Placement per Global Clock: Region X3Y3
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |         178 |               0 |  154 |      0 |   24 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g4        | 12    | BUFG_GT/O       | None       |         752 |               0 |  751 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g6        | 15    | BUFG_GT/O       | None       |        1883 |               0 | 1880 |      0 |    2 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0]  |
-| g8        | 2     | BUFG_GT/O       | None       |         277 |               0 |  277 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_mgt_refclk_bufg                                                                                                                                                                                                                                                       |
-| g9        | 18    | BUFG_GT/O       | None       |         186 |               0 |  185 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g11       | 21    | BUFG_GT/O       | None       |        1042 |               0 | 1040 |      0 |    1 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
-| g13       | 0     | BUFGCE/O        | None       |         337 |               0 |  334 |      0 |    0 |   0 |  2 |    0 |   0 |       0 | clk_125mhz_int                                                                                                                                                                                                                                                            |
-| g5        | 13    | BUFG_GT/O       | None       |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]  |
-| g10       | 19    | BUFG_GT/O       | None       |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]  |
-| g7        | 16    | BUFG_GT/O       | None       |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk_out[0]   |
-| g12       | 22    | BUFG_GT/O       | None       |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk_out[0]   |
-| g15       | 8     | BUFGCE/O        | None       |           0 |              26 |   26 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | pcie_user_reset                                                                                                                                                                                                                                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-40. Clock Region Cell Placement per Global Clock: Region X0Y4
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |           5 |               0 |  0 |      0 |    5 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-41. Clock Region Cell Placement per Global Clock: Region X1Y4
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |          26 |               0 |  1 |      0 |   25 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-42. Clock Region Cell Placement per Global Clock: Region X2Y4
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |         481 |               0 | 462 |      0 |   19 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g4        | 12    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g9        | 18    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g11       | 21    | BUFG_GT/O       | None       |           1 |               0 |   0 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-43. Clock Region Cell Placement per Global Clock: Region X3Y4
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 23    | BUFG_GT/O       | None       |          24 |               0 | 18 |      0 |    6 |   0 |  0 |    0 |   0 |       0 | pcie3_ultrascale_inst/inst/gt_top_i/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                 |
-| g4+       | 12    | BUFG_GT/O       | None       |           0 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gtwiz_userclk_rx_usrclk2_out[0] |
-| g9+       | 18    | BUFG_GT/O       | None       |           0 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy1.eth_xcvr_phy_1/xcvr_gth_com_us.eth_xcvr_gth_full_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_full_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0] |
-| g11+      | 21    | BUFG_GT/O       | None       |           0 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sfp_phy_quad_inst/phy2.eth_xcvr_phy_2/xcvr_gth.eth_xcvr_gth_channel_inst/inst/gen_gtwizard_gthe3_top.eth_xcvr_gth_channel_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gtwiz_userclk_tx_usrclk2_out[0]  |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts

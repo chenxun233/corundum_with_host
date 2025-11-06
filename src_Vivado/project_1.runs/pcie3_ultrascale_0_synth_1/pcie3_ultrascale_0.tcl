@@ -25,18 +25,19 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.cache/wt [current_project]
-set_property parent.project_path /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.xpr [current_project]
+set_property webtalk.parent_dir /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.cache/wt [current_project]
+set_property parent.project_path /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.cache/ip [current_project]
+set_property ip_output_repo /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0.xci
-set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/source/pcie3_ultrascale_0-PCIE_X0Y0.xdc]
-set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/synth/pcie3_ultrascale_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/ip_0/synth/pcie3_ultrascale_0_gt_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/ip_0/synth/pcie3_ultrascale_0_gt.xdc]
+set_property generic {FPGA_ID=32'h03823093 FW_ID=32'h00000000 FW_VER=32'h00000100 BOARD_ID=32'h1ce40003 BOARD_VER=32'h01000000 BUILD_DATE=32'd1762433129 GIT_HASH=32'h00000000 RELEASE_INFO=32'h00000000 TDMA_BER_ENABLE=0 IF_COUNT=2 PORTS_PER_IF=1 SCHED_PER_IF=1 PORT_MASK=0 CLK_PERIOD_NS_NUM=4 CLK_PERIOD_NS_DENOM=1 PTP_CLOCK_PIPELINE=0 PTP_CLOCK_CDC_PIPELINE=0 PTP_PORT_CDC_PIPELINE=0 PTP_PEROUT_ENABLE=1 PTP_PEROUT_COUNT=1 EVENT_QUEUE_OP_TABLE_SIZE=32 TX_QUEUE_OP_TABLE_SIZE=32 RX_QUEUE_OP_TABLE_SIZE=32 CQ_OP_TABLE_SIZE=32 EQN_WIDTH=5 TX_QUEUE_INDEX_WIDTH=11 RX_QUEUE_INDEX_WIDTH=8 CQN_WIDTH=12 EQ_PIPELINE=3 TX_QUEUE_PIPELINE=3 RX_QUEUE_PIPELINE=3 CQ_PIPELINE=3 TX_DESC_TABLE_SIZE=32 RX_DESC_TABLE_SIZE=32 RX_INDIR_TBL_ADDR_WIDTH=8 TX_SCHEDULER_OP_TABLE_SIZE=32 TX_SCHEDULER_PIPELINE=3 TDMA_INDEX_WIDTH=6 PTP_TS_ENABLE=1 TX_CPL_FIFO_DEPTH=32 TX_CHECKSUM_ENABLE=1 RX_HASH_ENABLE=1 RX_CHECKSUM_ENABLE=1 PFC_ENABLE=1 LFC_ENABLE=1 ENABLE_PADDING=1 ENABLE_DIC=1 MIN_FRAME_LENGTH=64 TX_FIFO_DEPTH=32768 RX_FIFO_DEPTH=65536 MAX_TX_SIZE=9214 MAX_RX_SIZE=9214 TX_RAM_SIZE=32768 RX_RAM_SIZE=32768 APP_ID=32'h00000000 APP_ENABLE=0 APP_CTRL_ENABLE=1 APP_DMA_ENABLE=1 APP_AXIS_DIRECT_ENABLE=1 APP_AXIS_SYNC_ENABLE=1 APP_AXIS_IF_ENABLE=1 APP_STAT_ENABLE=1 DMA_IMM_ENABLE=0 DMA_IMM_WIDTH=32 DMA_LEN_WIDTH=16 DMA_TAG_WIDTH=16 RAM_ADDR_WIDTH=15 RAM_PIPELINE=2 IRQ_INDEX_WIDTH=5 AXIL_CTRL_DATA_WIDTH=32 AXIL_CTRL_ADDR_WIDTH=24 AXIL_APP_CTRL_DATA_WIDTH=32 AXIL_APP_CTRL_ADDR_WIDTH=24 AXIS_ETH_TX_PIPELINE=0 AXIS_ETH_TX_FIFO_PIPELINE=2 AXIS_ETH_TX_TS_PIPELINE=0 AXIS_ETH_RX_PIPELINE=0 AXIS_ETH_RX_FIFO_PIPELINE=2 STAT_ENABLE=1 STAT_DMA_ENABLE=1 STAT_PCIE_ENABLE=1 STAT_INC_WIDTH=24 STAT_ID_WIDTH=10 AXIS_PCIE_DATA_WIDTH=256} [current_fileset]
+read_ip -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0.xci
+set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/ip_0/synth/pcie3_ultrascale_0_gt_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/ip_0/synth/pcie3_ultrascale_0_gt.xdc]
+set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/source/pcie3_ultrascale_0-PCIE_X0Y0.xdc]
+set_property used_in_implementation false [get_files -all /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/synth/pcie3_ultrascale_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -50,7 +51,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1 -new_name pcie3_ultrascale_0 -ip [get_ips pcie3_ultrascale_0]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1 -new_name pcie3_ultrascale_0 -ip [get_ips pcie3_ultrascale_0]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -91,32 +92,32 @@ write_checkpoint -force -noxdef pcie3_ultrascale_0.dcp
 create_report "pcie3_ultrascale_0_synth_1_synth_report_utilization_0" "report_utilization -file pcie3_ultrascale_0_utilization_synth.rpt -pb pcie3_ultrascale_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0.dcp /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0.dcp
+  file copy -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0.dcp /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_stub.v
+  write_verilog -force -mode synth_stub /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_sim_netlist.v
+  write_verilog -force -mode funcsim /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -126,47 +127,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0.dcp /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0.dcp
+  file copy -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0.dcp /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_stub.v /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_stub.v
+  file rename -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_stub.v /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_stub.vhdl /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_stub.vhdl
+  file rename -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_stub.vhdl /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_sim_netlist.v /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_sim_netlist.v
+  file rename -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_sim_netlist.v /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_sim_netlist.vhdl /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_sim_netlist.vhdl
+  file rename -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/pcie3_ultrascale_0_synth_1/pcie3_ultrascale_0_sim_netlist.vhdl /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0]} {
+if {[file isdir /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0]} {
   catch { 
-    file copy -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_stub.v /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0
+    file copy -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_stub.v /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0
   }
 }
 
-if {[file isdir /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0]} {
+if {[file isdir /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0]} {
   catch { 
-    file copy -force /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0_stub.vhdl /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0
+    file copy -force /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0_stub.vhdl /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.ip_user_files/ip/pcie3_ultrascale_0
   }
 }
 file delete __synthesis_is_running__

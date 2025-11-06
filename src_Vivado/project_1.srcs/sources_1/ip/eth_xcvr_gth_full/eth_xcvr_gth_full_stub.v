@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Wed Nov  5 12:45:53 2025
+// Date        : Wed Nov  5 12:45:52 2025
 // Host        : chenxun-Z790-UD-AC running 64-bit Ubuntu 24.04.3 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_full/eth_xcvr_gth_full_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top eth_xcvr_gth_full -prefix
+//               eth_xcvr_gth_full_ eth_xcvr_gth_full_stub.v
 // Design      : eth_xcvr_gth_full
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku035-fbva676-2-e

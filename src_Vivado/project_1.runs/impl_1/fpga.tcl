@@ -68,26 +68,26 @@ set rc [catch {
   create_project -in_memory -part xcku035-fbva676-2-e
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.cache/wt [current_project]
-  set_property parent.project_path /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.xpr [current_project]
-  set_property ip_output_repo /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.cache/wt [current_project]
+  set_property parent.project_path /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.xpr [current_project]
+  set_property ip_output_repo /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.runs/synth_1/fpga.dcp
-  read_ip -quiet /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0_1/pcie3_ultrascale_0.xci
-  read_ip -quiet /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/eth_xcvr_gth_channel.xci
-  read_ip -quiet /home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_full/eth_xcvr_gth_full.xci
-  read_xdc {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc}}
-  read_xdc {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/boot.xdc}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/eth_xcvr_phy_10g_gty_wrapper.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_ptp_clock.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_rb_clk_info.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/ptp_td_leaf.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/rb_drp.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/sync_reset.tcl}}
-  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_exanic_x10/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/tdma_ber_ch.tcl}}
+  add_files -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.runs/synth_1/fpga.dcp
+  read_ip -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_channel/eth_xcvr_gth_channel.xci
+  read_ip -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/eth_xcvr_gth_full/eth_xcvr_gth_full.xci
+  read_ip -quiet /home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/sources_1/ip/pcie3_ultrascale_0/pcie3_ultrascale_0.xci
+  read_xdc {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/fpga_k35.xdc}}
+  read_xdc {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/boot.xdc}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/axis_async_fifo.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/eth_xcvr_phy_10g_gty_wrapper.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_port.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_ptp_clock.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/mqnic_rb_clk_info.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/ptp_td_leaf.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/rb_drp.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/sync_reset.tcl}}
+  read_xdc -unmanaged {{/home/chenxun/Documents/Project/corundum_with_host/src_Vivado/project_1.srcs/constrs_1/imports/xdc files/tdma_ber_ch.tcl}}
   link_design -top fpga -part xcku035-fbva676-2-e
   close_msg_db -file init_design.pb
 } RESULT]
@@ -123,7 +123,7 @@ set rc [catch {
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
     implement_debug_core 
   } 
-  place_design 
+  place_design -directive ExtraTimingOpt
   write_checkpoint -force fpga_placed.dcp
   create_report "impl_1_place_report_io_0" "report_io -file fpga_io_placed.rpt"
   create_report "impl_1_place_report_utilization_0" "report_utilization -file fpga_utilization_placed.rpt -pb fpga_utilization_placed.pb"
@@ -138,11 +138,27 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
+start_step phys_opt_design
+set ACTIVE_STEP phys_opt_design
+set rc [catch {
+  create_msg_db phys_opt_design.pb
+  phys_opt_design -directive Explore
+  write_checkpoint -force fpga_physopt.dcp
+  close_msg_db -file phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step phys_opt_design
+  unset ACTIVE_STEP 
+}
+
 start_step route_design
 set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design 
+  route_design -directive NoTimingRelaxation
   write_checkpoint -force fpga_routed.dcp
   create_report "impl_1_route_report_drc_0" "report_drc -file fpga_drc_routed.rpt -pb fpga_drc_routed.pb -rpx fpga_drc_routed.rpx"
   create_report "impl_1_route_report_methodology_0" "report_methodology -file fpga_methodology_drc_routed.rpt -pb fpga_methodology_drc_routed.pb -rpx fpga_methodology_drc_routed.rpx"
